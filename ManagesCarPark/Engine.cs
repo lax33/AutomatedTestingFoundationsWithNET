@@ -7,7 +7,7 @@ namespace ManagesCarPark
     class Engine
     {
         internal int power;
-        internal double volume;
+        internal double capacity;
         internal string type;
         internal int serialNumber;
     }

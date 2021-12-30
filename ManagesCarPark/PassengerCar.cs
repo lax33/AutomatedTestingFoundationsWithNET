@@ -18,7 +18,7 @@ namespace ManagesCarPark
             int enginePower,
             int engineSerialNumber, 
             string engineType,
-            double engineVolume)
+            double engineCapacity)
         {
             this.automobileModel = automobileModel;
             this.automobileColor = automobileColor;
@@ -27,7 +27,7 @@ namespace ManagesCarPark
             engine.power = enginePower;
             engine.serialNumber = engineSerialNumber;
             engine.type = engineType;
-            engine.volume = engineVolume;
+            engine.capacity = engineCapacity;
         }
         
 
