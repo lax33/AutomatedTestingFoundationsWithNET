@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ManagesCarPark
+﻿namespace ManagesCarPark
 {
-    
+
     class PassengerCar
     {
         public readonly string automobileModel;
         public readonly string automobileColor;
         public readonly int automobileYear;
         public readonly Engine engine = new Engine();
-       
+
         public PassengerCar(string automobileModel,
-            string automobileColor, 
+            string automobileColor,
             int automobileYear,
             int enginePower,
-            int engineSerialNumber, 
+            int engineSerialNumber,
             string engineType,
             double engineCapacity)
         {
@@ -29,7 +25,7 @@ namespace ManagesCarPark
             engine.type = engineType;
             engine.capacity = engineCapacity;
         }
-        
+
 
     }
 }

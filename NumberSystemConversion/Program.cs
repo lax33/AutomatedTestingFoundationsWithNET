@@ -26,7 +26,7 @@ namespace NumberSystemConversion
             }
 
             ResultOfTransferToAnotherSystemOutput(number, baseNumber);
-            
+
             Console.ReadLine();
 
 
@@ -61,7 +61,7 @@ namespace NumberSystemConversion
                             case 10:
                                 Console.Write("A");
                                 break;
-                            case 11: 
+                            case 11:
                                 Console.Write("B");
                                 break;
                             case 12:
