@@ -2,5 +2,6 @@
 {
     class Scooter
     {
+        public string typeEngineCooling;
     }
 }

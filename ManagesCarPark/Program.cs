@@ -6,13 +6,14 @@ namespace ManagesCarPark
     {
         static void Main(string[] args)
         {
-            PassengerCar passengerCar = new PassengerCar("ford", "red",
-                1969, 90, 1458789, "B", 2.0);
+            Engine engineFord = new Engine(110, 1.6, TypeEnine.gas, 45625665489);
+            Transmission transmissionFord = new Transmission(TypeTransmission.automaticTransmission,
+                5, Manufacturer.ford);
+            PassengerCar passengerCarFord = new PassengerCar("ford", "red",
+                1969, engineFord, transmissionFord);
 
-            Console.WriteLine(passengerCar.automobileModel, passengerCar.automobileColor,
-                passengerCar.automobileYear, passengerCar.engine.power,
-                passengerCar.engine.serialNumber, passengerCar.engine.type,
-                passengerCar.engine.capacity);
+
+            passengerCarFord.PrintC();
         }
     }
 }
