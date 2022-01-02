@@ -14,6 +14,8 @@ namespace ManagesCarPark
 
 
             passengerCarFord.PrintC();
+
+            Console.ReadLine();
         }
     }
 }
