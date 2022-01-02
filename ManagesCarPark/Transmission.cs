@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    class Transmission
+    public class Transmission
     {
         public string typeTransmission;
         public string manufacturer;

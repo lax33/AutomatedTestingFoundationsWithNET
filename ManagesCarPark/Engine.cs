@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    class Engine
+    public class Engine
     {
         internal int power;
         internal double capacity;

@@ -5,17 +5,19 @@
     {
         public readonly string automobileModel;
         public readonly string automobileColor;
-        public readonly int automobileYear;
-        //public readonly string typeTransmission;
+        public readonly string automobileYear;
+        public readonly string vin;
         public readonly Engine engine;
         public readonly Transmission transmission;
 
 
         public PassengerCar(string automobileModel,
             string automobileColor,
-            int automobileYear,
+            string automobileYear,
+            string vin,
             Engine engine,
-            Transmission transmission) : base( automobileModel)
+            Transmission transmission) : base( automobileModel, automobileColor, automobileYear,
+                                               vin, engine, transmission )
 
         {
             this.automobileModel = automobileModel;
@@ -23,7 +25,6 @@
             this.automobileYear = automobileYear;
             this.transmission = transmission;
             this.engine = engine;
-
         }
 
 
