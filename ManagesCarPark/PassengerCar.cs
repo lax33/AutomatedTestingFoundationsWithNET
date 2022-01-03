@@ -1,32 +1,20 @@
 ﻿namespace ManagesCarPark
 {
 
-    class PassengerCar : PrintCar
+    class PassengerCar : Car
     {
-        public readonly string automobileModel;
-        public readonly string automobileColor;
-        public readonly string automobileYear;
-        public readonly string vin;
-        public readonly Engine engine;
-        public readonly Transmission transmission;
-
 
         public PassengerCar(string automobileModel,
+            string carType,
             string automobileColor,
             string automobileYear,
             string vin,
             Engine engine,
-            Transmission transmission) : base( automobileModel, automobileColor, automobileYear,
-                                               vin, engine, transmission )
-
+            Transmission transmission,
+            Chassis chassis) : base(automobileModel, carType, automobileColor, automobileYear,
+                                                vin, engine, transmission, chassis)
         {
-            this.automobileModel = automobileModel;
-            this.automobileColor = automobileColor;
-            this.automobileYear = automobileYear;
-            this.transmission = transmission;
-            this.engine = engine;
         }
-
 
     }
 }

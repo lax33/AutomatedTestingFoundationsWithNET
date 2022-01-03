@@ -2,21 +2,30 @@
 
 namespace ManagesCarPark
 {
-    class Scooter : Car
+    public class Car
     {
-        public Scooter (string automobileModel,
-            string carType,
-            string automobileColor,
-            string automobileYear,
-            string vin,
-            Engine engine,
-            Transmission transmission,
-            Chassis chassis) : base(automobileModel, carType, automobileColor, automobileYear,
-                                             vin, engine, transmission, chassis)
-        {
-        }
+        protected readonly string automobileModel;
+        protected readonly string carType;
+        protected readonly string automobileColor;
+        protected readonly string automobileYear;
+        protected readonly string vin;
+        protected readonly Engine engine;
+        protected readonly Transmission transmission;
+        protected readonly Chassis chassis;
 
-        public override void Print()
+        protected Car(string automobileModel, string carType, string automobileColor, string automobileYear,
+                        string vin, Engine engine, Transmission transmission, Chassis chassis )
+        {
+            this.automobileModel = automobileModel;
+            this.carType = carType;
+            this.automobileColor = automobileColor;
+            this.automobileYear = automobileYear;
+            this.vin = vin;
+            this.engine = engine;
+            this.transmission = transmission;
+            this.chassis = chassis;
+        }
+        public virtual void Print()
         {
             Console.WriteLine("Automobile model - " + automobileModel);
             Console.WriteLine("Car type - " + carType);

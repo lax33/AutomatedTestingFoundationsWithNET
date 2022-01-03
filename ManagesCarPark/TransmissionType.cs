@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    public class TypeTransmission
+    public class TransmissionType
     {
         public static readonly string automaticTransmission = "AutomaticTransmission";
         public static readonly string manualTransmission = "ManualTransmission";

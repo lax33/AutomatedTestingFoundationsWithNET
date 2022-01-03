@@ -12,7 +12,5 @@
             this.manufacturer = manufacturer;
             this.numberOfGears = numberOfGears;
         }
-
     }
-
 }
