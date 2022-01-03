@@ -29,9 +29,6 @@ namespace ManagesCarPark
             Console.WriteLine("Type transmission - " + transmission.typeTransmission);
             Console.WriteLine("Manufacturer of transmission - " + transmission.manufacturer);
             Console.WriteLine("Number of gears - " + transmission.numberOfGears);
-            Console.WriteLine("Wheels number - " + chassis.wheelsNumber);
-            Console.WriteLine("Number Chassis - " + chassis.numberChassis);
-            Console.WriteLine("Permissible load - " + chassis.permissibleLoad);
             Console.WriteLine();
         }
     }

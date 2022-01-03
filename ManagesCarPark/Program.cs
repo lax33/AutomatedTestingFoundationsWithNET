@@ -48,7 +48,7 @@ namespace ManagesCarPark
 
             Scooter scooterRenault = new Scooter("Renault", CarType.scuter, "Green", "2020", "7854541545",
                 engineScuterRenault,
-                transmissionScuterRenault, chassisScuter);
+                transmissionScuterRenault, null);
 
 
 
