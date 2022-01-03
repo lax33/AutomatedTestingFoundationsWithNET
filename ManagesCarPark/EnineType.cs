@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    class TypeEnine
+    class EnineType
     {
         public static string gas = "Gas";
         public static string diesel = "Diesel";
