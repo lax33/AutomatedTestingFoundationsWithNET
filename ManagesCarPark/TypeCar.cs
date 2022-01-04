@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    public class CarType
+    class CarType
     {
         public static readonly string passengerCar = "Passenger car";
         public static readonly string truck = "Track";
