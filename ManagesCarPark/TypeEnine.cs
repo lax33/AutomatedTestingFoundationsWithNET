@@ -1,8 +1,8 @@
 ﻿namespace ManagesCarPark
 {
-    class EnineType
+    static class EnineType
     {
-        public static string gas = "Gas";
-        public static string diesel = "Diesel";
+        public const string gas = "Gas";
+        public const string diesel = "Diesel";
     }
 }

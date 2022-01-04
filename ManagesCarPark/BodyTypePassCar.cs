@@ -2,9 +2,9 @@
 {
     static class BodyTypePassCar
     {
-        public static string sedan = "sedan";
-        public static readonly string hatchback = "hatchback";
-        public static readonly string crossover = "crossover";
-        public static readonly string jeep = "jeep";
+        public const string sedan = "sedan";
+        public const string hatchback = "hatchback";
+        public const string crossover = "crossover";
+        public const string jeep = "jeep";
     }
 }

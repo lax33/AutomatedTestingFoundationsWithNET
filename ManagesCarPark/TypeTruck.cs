@@ -1,8 +1,8 @@
 ﻿namespace ManagesCarPark
 {
-    class TypeTruck
+    static class TypeTruck
     {
-        public static readonly string wagon = "wagon";
-        public static readonly string tipper = "tipper";
+        public const string wagon = "wagon";
+        public const string tipper = "tipper";
     }
 }

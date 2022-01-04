@@ -35,7 +35,7 @@ namespace ManagesCarPark
             // Scuter Renault
             Engine engineScuterRenault = new Engine(15, 0.4, EnineType.gas, 45716334);
             Transmission transmissionScuterRenault = new Transmission(TransmissionType.variableTransmission, 0, Manufacturer.renault);
-            Chassis chassisScuter = new Chassis(2, "545486156", 150);
+            Chassis chassisScuter = new Chassis(2, "545486156", 0.15);
             Scooter scooterRenault = new Scooter("Renault", CarType.scuter, "Green", "2020",
                                                 engineScuterRenault, transmissionScuterRenault, chassisScuter);
 

@@ -1,10 +1,10 @@
 ﻿namespace ManagesCarPark
 {
-    class CarType
+    static class CarType
     {
-        public static readonly string passengerCar = "Passenger car";
-        public static readonly string truck = "Track";
-        public static readonly string bus = "Bus";
-        public static readonly string scuter = "Scuter";
+        public const string passengerCar = "Passenger car";
+        public const string truck = "Track";
+        public const string bus = "Bus";
+        public const string scuter = "Scuter";
     }
 }

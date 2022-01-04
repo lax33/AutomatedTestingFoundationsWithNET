@@ -1,10 +1,10 @@
 ﻿namespace ManagesCarPark
 {
-    public class TransmissionType
+    static class TransmissionType
     {
-        public static readonly string automaticTransmission = "AutomaticTransmission";
-        public static readonly string manualTransmission = "ManualTransmission";
-        public static readonly string roboticTransmission = " RoboticTransmission";
-        public static readonly string variableTransmission = "VariableTransmission";
+        public const string automaticTransmission = "AutomaticTransmission";
+        public const string manualTransmission = "ManualTransmission";
+        public const string roboticTransmission = " RoboticTransmission";
+        public const string variableTransmission = "VariableTransmission";
     }
 }
