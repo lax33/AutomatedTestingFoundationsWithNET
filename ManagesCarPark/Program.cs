@@ -11,16 +11,16 @@ namespace ManagesCarPark
             Transmission transmissionFord = new Transmission(TransmissionType.automaticTransmission,
                 5, Manufacturer.ford);
             Chassis chassisFord = new Chassis(4, "85214", 1.5);
-            PassengerCar passengerCarFord = new PassengerCar("Ford", CarType.passengerCar, BodyTypePassCar.sedan, "red",
-                 "1969", engineFord, transmissionFord, chassisFord);
+            PassengerCar passengerCarFord = new PassengerCar("Ford", CarType.passengerCar,
+                BodyTypePassCar.sedan, "red", "1969", engineFord, transmissionFord, chassisFord);
 
             // Truck Renault
             Engine engineTruckRenault = new Engine(300, 3.0, EnineType.diesel, 89235487);
             Transmission transmissionRenault = new Transmission(TransmissionType.manualTransmission,
                 4, Manufacturer.nissan);
             Chassis chassisRenault = new Chassis(6, "8521347", 25);
-            Truck truckRenault = new Truck("Renault", CarType.truck, TypeTruck.wagon, "blue", "2012",
-                engineTruckRenault, transmissionRenault, chassisRenault);
+            Truck truckRenault = new Truck("Renault", CarType.truck, TypeTruck.wagon, "blue",
+                "2012", engineTruckRenault, transmissionRenault, chassisRenault);
 
 
             // Bus Nissan
