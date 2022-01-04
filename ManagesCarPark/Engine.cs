@@ -14,8 +14,5 @@
             this.typeEngin = typeEngin;
             this.serialNumber = serialNumber;
         }
-
     }
-
-
 }

@@ -10,13 +10,12 @@ namespace ManagesCarPark
             string carType,
             string automobileColor,
             string automobileYear,
-            string vin,
             string numberOfSeats,
             Engine engine,
             Transmission transmission,
             Chassis chassis) : base(automobileModel, carType,
                                             automobileColor, automobileYear,
-                                            vin, engine, transmission, chassis)
+                                            engine, transmission, chassis)
         {
             this.numberOfSeats = numberOfSeats;
         }
@@ -27,7 +26,6 @@ namespace ManagesCarPark
             Console.WriteLine("Car type - " + carType);
             Console.WriteLine("Color - " + automobileColor);
             Console.WriteLine("Automobile Year - " + automobileYear);
-            Console.WriteLine("VIN - " + vin);
             Console.WriteLine("Number of seats - " + numberOfSeats);
             Console.WriteLine("Engine power - " + engine.power);
             Console.WriteLine("Engine capacity - " + engine.capacity);

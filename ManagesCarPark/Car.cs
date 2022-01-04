@@ -14,13 +14,12 @@ namespace ManagesCarPark
         protected readonly Chassis chassis;
 
         protected Car(string automobileModel, string carType, string automobileColor, string automobileYear,
-                        string vin, Engine engine, Transmission transmission, Chassis chassis )
+                        Engine engine, Transmission transmission, Chassis chassis)
         {
             this.automobileModel = automobileModel;
             this.carType = carType;
             this.automobileColor = automobileColor;
             this.automobileYear = automobileYear;
-            this.vin = vin;
             this.engine = engine;
             this.transmission = transmission;
             this.chassis = chassis;
@@ -31,7 +30,6 @@ namespace ManagesCarPark
             Console.WriteLine("Car type - " + carType);
             Console.WriteLine("Color - " + automobileColor);
             Console.WriteLine("Automobile Year - " + automobileYear);
-            Console.WriteLine("VIN - " + vin);
             Console.WriteLine("Engine power - " + engine.power);
             Console.WriteLine("Engine capacity - " + engine.capacity);
             Console.WriteLine("Engine serial number - " + engine.serialNumber);
