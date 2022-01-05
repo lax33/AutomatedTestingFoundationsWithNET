@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace InputOutputString
 {
@@ -7,41 +6,47 @@ namespace InputOutputString
     {
         static void Main(string[] args)
         {
-            int numberArgs = args.Length;
-
             char[] line = args[0].ToCharArray();
+
+            char[] arr = SortChars(line);
+
+            // output to console
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if (arr[j] != '\0')
+                { Console.Write(arr[j]); }
+            }
+
+            Console.ReadLine();
+        }
+
+        // sorting an array of characters, removing duplicate ones
+        static char[] SortChars(char[] line)
+        {
             int numberLine = line.Length;
             char[] arr = new char[numberLine];
-            
+
             for (int i = 0; i < numberLine; i++)
             {
-                bool coincidence = false;
+                bool coincidence = false; // repeating character indicator
                 char ch = line[i];
                 for (int j = 0; j < numberLine; j++)
                 {
                     if (i != j)
                     {
-                        if (ch == line[j])
+                        if (ch == arr[j])
                         {
                             coincidence = true;
                         }
                     }
-                    
                 }
-
                 if (!coincidence)
                 {
-                    arr[i] = line[i];
+                    arr[i] = ch;
                 }
             }
 
-            
-            for (int i = 0; i < numberLine; i++)
-            {
-                Console.WriteLine(args[i]);
-            }
-
-            Console.ReadLine();
+            return arr;
         }
     }
 }
