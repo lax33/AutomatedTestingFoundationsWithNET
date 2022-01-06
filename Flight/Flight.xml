@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Flight</name>
+    </assembly>
+    <members>
+        <member name="M:Flight.Bird.FlyTo(Flight.Coordinate)">
+            <summary>
+            The distance from the current position to the new point
+            </summary>
+            <param name="newPoint"> New point coordinate </param>
+            <returns></returns>
+        </member>
+        <member name="M:Flight.Bird.GetFlyTime(Flight.Coordinate)">
+            <summary>
+            Flight time
+            </summary>
+            <param name="newPoint"> New point coordinate </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
