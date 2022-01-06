@@ -8,7 +8,7 @@ namespace InputOutputString
         {
             char[] line = args[0].ToCharArray();
 
-            char[] arr = SortChars(line);
+            char[] arr = SortChars(line); // sort result
 
             // output to console
             for (int j = 0; j < arr.Length; j++)
