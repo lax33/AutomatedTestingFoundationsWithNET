@@ -24,7 +24,7 @@ namespace Flight
         }
 
         /// <summary>
-        /// Flight time
+        /// Airplane flight time.
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
         /// <returns> value in hours </returns>

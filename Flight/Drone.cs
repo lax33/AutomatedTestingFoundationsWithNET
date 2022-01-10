@@ -14,7 +14,7 @@ namespace Flight
         }
 
         /// <summary>
-        /// The distance from the current position to the new point
+        /// The distance from the current position to the new point.
         /// </summary>
         /// <param name="newPoint"></param>
         /// <returns></returns>

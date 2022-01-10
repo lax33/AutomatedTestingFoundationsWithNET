@@ -24,7 +24,8 @@ namespace Flight
         }
 
         /// <summary>
-        /// Flight time
+        /// Bird flight time. This is the distanse divided by the speed.
+        /// Bird speed may be between 0-20 кm/h. Speed is randomly selected.
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
         /// <returns> value in hours </returns>
@@ -35,7 +36,7 @@ namespace Flight
                                         Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
 
             Random rndSpeed = new Random();
-            double speed = rndSpeed.Next(0, 20); // speed burd from the range of 0-20 km/h
+            double speed = rndSpeed.Next(0, 20); // speed bird from the range of 0-20 km/h
 
             return distance / speed;
         }
