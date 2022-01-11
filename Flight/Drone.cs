@@ -35,13 +35,14 @@ namespace Flight
         public double GetFlyTime(Coordinate newPoint)
         {
             const int speedDrone = 100;
-            double dist10 = speedDrone * 0.166; // the distance flight for 10 minite
+            double dist10 = speedDrone * 0.166; // the distance flight for 10 minite in hours
 
             double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +
                                      Math.Pow(currentPosition.y - newPoint.y, 2) +
-                                     Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
-            int timeWait = (int)Math.Ceiling(distance / dist10) - 1; // waiting time.
-            double timeFlight = distance / speedDrone;
+                                     Math.Pow(currentPosition.z - newPoint.z, 2), 0.5); 
+
+            int timeWait = (int)(Math.Floor(distance / dist10) * 0.016); // waiting time in hours
+            double timeFlight = distance / speedDrone;                   // flight time  
 
             return timeFlight + timeWait;
         }
