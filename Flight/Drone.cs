@@ -25,12 +25,25 @@ namespace Flight
                             Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
         }
 
+        /// <summary>
+        /// Drone flight time.
+        /// The drone speed 100 km/h.
+        /// The drone hovers in the air every 10 minutes of flight for 1 minute.
+        /// </summary>
+        /// <param name="newPoint"> New point coordinate </param>
+        /// <returns> Value in hours </returns>
         public double GetFlyTime(Coordinate newPoint)
         {
+            const int speedDrone = 100;
+            double dist10 = speedDrone * 0.166; // the distance flight for 10 minite
+
             double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +
                                      Math.Pow(currentPosition.y - newPoint.y, 2) +
                                      Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
-            return ;
+            int timeWait = (int)Math.Ceiling(distance / dist10) - 1; // waiting time.
+            double timeFlight = distance / speedDrone;
+
+            return timeFlight + timeWait;
         }
     }
 }

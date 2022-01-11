@@ -25,35 +25,22 @@ namespace Flight
 
         /// <summary>
         /// Airplane flight time.
-        /// The start speed is 200 km/h and it increases every 10 km by 10 km/h
-        /// The maximum speed 800 km/h 
+        /// The start speed is 200 km/h and it increases every 10 km by 10 km/h. 
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
         /// <returns> value in hours </returns>
         public double GetFlyTime(Coordinate newPoint)
         {
             const int speedStart = 200;
+            double acceleration = (Math.Pow(210, 2) - Math.Pow(200, 2)) / 2 * 10;
+
             double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +
                                        Math.Pow(currentPosition.y - newPoint.y, 2) +
                                        Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
 
-            double speedEnd = speedStart + distance;
+            double speedEnd = Math.Pow(2 * distance * acceleration + speedStart * speedStart, 0.5);
 
-            if (speedEnd > 800)
-            {
-                speedEnd = 800;
-                double a = (Math.Pow(800, 2) - Math.Pow(speedStart, 2)) /
-                    2 * distance; // acceleration ?
-
-                return (800 - speedStart) / a + (distance - 80) / 800 ;
-            }
-            else
-            {
-                double a = (Math.Pow(speedEnd, 2) - Math.Pow(speedStart, 2)) /
-                    2 * distance; // acceleration ?
-
-                return (speedEnd - speedStart) / a;
-            }
+            return (speedEnd - speedStart) / acceleration;
         }
     }
 }
