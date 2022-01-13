@@ -15,7 +15,7 @@ namespace Flight
         /// The distance from the current position to the new point
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
-        /// <returns> value in kilometers </returns>
+        /// <returns> Value in kilometers </returns>
         public double FlyTo(Coordinate newPoint)
         {
             return Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +
@@ -28,7 +28,7 @@ namespace Flight
         /// Bird speed may be between 0-20 кm/h. Speed is randomly selected.
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
-        /// <returns> value in hours </returns>
+        /// <returns> Value in hours </returns>
         public double GetFlyTime(Coordinate newPoint)
         {
             double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +

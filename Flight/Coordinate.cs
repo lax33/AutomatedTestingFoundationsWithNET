@@ -6,11 +6,11 @@ namespace Flight
 {
     internal struct Coordinate
     {
-        public uint x;
-        public uint y;
-        public uint z;
+        public int x;
+        public int y;
+        public int z;
 
-        public Coordinate(uint x, uint y, uint z)
+        public Coordinate(int x, int y, int z)
         {
             this.x = x;
             this.y = y;
