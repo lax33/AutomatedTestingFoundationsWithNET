@@ -2,7 +2,7 @@
 
 namespace ManagesCarPark
 {
-    class Truck : Car
+    public class Truck : Car
     {
         private readonly string typeTruck;
         public Truck(string automobileModel,

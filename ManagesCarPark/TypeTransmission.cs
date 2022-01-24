@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    static class TransmissionType
+    public static class TypeTransmission
     {
         public const string automaticTransmission = "AutomaticTransmission";
         public const string manualTransmission = "ManualTransmission";

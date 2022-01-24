@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    static class CarType
+    public static class TypeCar
     {
         public const string passengerCar = "Passenger car";
         public const string truck = "Track";
