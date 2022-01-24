@@ -2,7 +2,7 @@
 
 namespace ManagesCarPark
 {
-    class Bus : Car
+    public class Bus : Car
     {
         private readonly string numberOfSeats;
 

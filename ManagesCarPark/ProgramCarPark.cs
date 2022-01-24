@@ -2,7 +2,7 @@
 
 namespace ManagesCarPark
 {
-    class Program
+    class ProgramCarPark
     {
         static void Main(string[] args)
         {

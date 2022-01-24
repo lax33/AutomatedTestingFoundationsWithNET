@@ -3,7 +3,7 @@
 namespace ManagesCarPark
 {
 
-    class PassengerCar : Car
+    public class PassengerCar : Car
     {
         private readonly string bodyType;
         public PassengerCar(string automobileModel,

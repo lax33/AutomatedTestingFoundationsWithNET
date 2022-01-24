@@ -2,7 +2,7 @@
 
 namespace Flight
 {
-    class Program
+    class ProgramFlihgt
     {
         static void Main(string[] args)
         {

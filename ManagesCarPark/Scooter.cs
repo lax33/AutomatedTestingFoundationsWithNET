@@ -1,6 +1,6 @@
 ﻿namespace ManagesCarPark
 {
-    class Scooter : Car
+    public class Scooter : Car
     {
         public Scooter(string automobileModel,
             string carType,
