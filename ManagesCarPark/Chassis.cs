@@ -2,10 +2,11 @@
 {
     public class Chassis
     {
-        internal int wheelsNumber;
-        internal string numberChassis;
-        internal double permissibleLoad;
+        public int wheelsNumber;
+        public string numberChassis;
+        public double permissibleLoad;
 
+        public Chassis(){}
         public Chassis(int wheelsNumber, string numberChassis, double permissibleLoad)
         {
             this.wheelsNumber = wheelsNumber;

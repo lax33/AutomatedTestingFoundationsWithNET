@@ -5,10 +5,9 @@ namespace ManagesCarPark
     [Serializable]
     public class Bus : Car
     {
-        public readonly string numberOfSeats;
+        public string numberOfSeats;
 
-        public Bus()
-        {}
+        public Bus() {}
 
         public Bus(string automobileModel,
             string carType,

@@ -6,6 +6,7 @@
         public string manufacturer;
         public int numberOfGears;
 
+        public Transmission(){}
         public Transmission(string typeTransmission, int numberOfGears, string manufacturer)
         {
             this.typeTransmission = typeTransmission;

@@ -1,20 +1,22 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace ManagesCarPark
 {
+    //[XmlInclude(typeof(Bus))]
     public class Car
     {
-        protected readonly string automobileModel;
-        protected readonly string carType;
-        protected readonly string automobileColor;
-        protected readonly string automobileYear;
-        protected readonly string vin;
-        protected readonly Engine engine;
-        protected readonly Transmission transmission;
-        protected readonly Chassis chassis;
+        public string automobileModel;
+        public string carType;
+        public string automobileColor;
+        public string automobileYear;
+        public string vin;
+        public Engine engine;
+        public Transmission transmission;
+        public Chassis chassis;
 
-        protected Car(){}
-        protected Car(string automobileModel, string carType, string automobileColor, string automobileYear,
+        public Car(){}
+        public Car(string automobileModel, string carType, string automobileColor, string automobileYear,
                         Engine engine, Transmission transmission, Chassis chassis)
         {
             this.automobileModel = automobileModel;

@@ -1,7 +1,6 @@
 ﻿using ManagesCarPark;
 using System.Collections;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -31,11 +30,17 @@ namespace Collections
                         new Chassis(2, "545486156", 0.15))
             };
 
-            
+            Bus bus= new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
+                new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
+                new Transmission(TypeTransmission.automaticTransmission, 5, "Nissan"),
+                new Chassis(6, "656412", 15));
+
+            File.Delete("Bus.xml");
             XmlSerializer serializer = new XmlSerializer(typeof(Bus));
+
             using (FileStream fl = new FileStream("Bus.xml", FileMode.OpenOrCreate))
             {
-                serializer.Serialize(fl,bus);
+                serializer.Serialize(fl, bus);
             }
         }
     }

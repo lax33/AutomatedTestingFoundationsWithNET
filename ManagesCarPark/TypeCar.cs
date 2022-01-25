@@ -1,5 +1,8 @@
-﻿namespace ManagesCarPark
+﻿using System;
+
+namespace ManagesCarPark
 {
+    [Serializable]
     public static class TypeCar
     {
         public const string passengerCar = "Passenger car";

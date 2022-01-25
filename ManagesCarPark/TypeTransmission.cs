@@ -1,5 +1,8 @@
-﻿namespace ManagesCarPark
+﻿using System;
+
+namespace ManagesCarPark
 {
+    [Serializable]
     public static class TypeTransmission
     {
         public const string automaticTransmission = "AutomaticTransmission";

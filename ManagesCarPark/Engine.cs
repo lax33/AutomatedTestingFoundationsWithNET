@@ -2,11 +2,12 @@
 {
     public class Engine
     {
-        internal int power;
-        internal double capacity;
-        internal string typeEngin;
-        internal long serialNumber;
+        public int power;
+        public double capacity;
+        public string typeEngin;
+        public long serialNumber;
 
+        public Engine(){}
         public Engine(int power, double capacity, string typeEngin, long serialNumber)
         {
             this.power = power;
