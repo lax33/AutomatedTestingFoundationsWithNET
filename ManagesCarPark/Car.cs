@@ -13,6 +13,7 @@ namespace ManagesCarPark
         protected readonly Transmission transmission;
         protected readonly Chassis chassis;
 
+        protected Car(){}
         protected Car(string automobileModel, string carType, string automobileColor, string automobileYear,
                         Engine engine, Transmission transmission, Chassis chassis)
         {

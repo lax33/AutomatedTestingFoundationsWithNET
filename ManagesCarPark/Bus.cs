@@ -2,9 +2,13 @@
 
 namespace ManagesCarPark
 {
+    [Serializable]
     public class Bus : Car
     {
-        private readonly string numberOfSeats;
+        public readonly string numberOfSeats;
+
+        public Bus()
+        {}
 
         public Bus(string automobileModel,
             string carType,

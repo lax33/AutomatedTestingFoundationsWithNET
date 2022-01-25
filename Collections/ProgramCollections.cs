@@ -1,5 +1,8 @@
 ﻿using ManagesCarPark;
 using System.Collections;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Collections
 {
@@ -27,6 +30,13 @@ namespace Collections
                         new Transmission(TypeTransmission.variableTransmission, 0, Manufacturer.renault),
                         new Chassis(2, "545486156", 0.15))
             };
+
+            
+            XmlSerializer serializer = new XmlSerializer(typeof(Bus));
+            using (FileStream fl = new FileStream("Bus.xml", FileMode.OpenOrCreate))
+            {
+                serializer.Serialize(fl,bus);
+            }
         }
     }
 }
