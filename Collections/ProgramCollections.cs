@@ -1,6 +1,8 @@
 ﻿using ManagesCarPark;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -9,6 +11,9 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            List<Bus> bus = new List<Bus>();
+            List<Truck> truck = new List<Truck>();
+
             ArrayList collection = new ArrayList()
             {
 
@@ -30,18 +35,43 @@ namespace Collections
                         new Chassis(2, "545486156", 0.15))
             };
 
-            Bus bus= new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
+            Bus bus1= new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
                 new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
                 new Transmission(TypeTransmission.automaticTransmission, 5, "Nissan"),
                 new Chassis(6, "656412", 15));
 
-            File.Delete("Bus.xml");
-            XmlSerializer serializer = new XmlSerializer(typeof(Bus));
+            //List<Bus> Bus = new List<Bus>() { bus };
+            //object o = collection[0];
 
-            using (FileStream fl = new FileStream("Bus.xml", FileMode.OpenOrCreate))
+            File.Delete("CapacityMore15.xml");
+
+            using (FileStream fl = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
             {
-                serializer.Serialize(fl, bus);
+                foreach (Car car in collection)
+                {
+                    if (car.engine.capacity > 1.5)
+                    {
+                        XmlSerializer serializer = new XmlSerializer(car.GetType());
+                        serializer.Serialize(fl, car);
+                    }
+                }
             }
+
+           
+            foreach (var car in collection)
+            {
+                if (car.GetType()== typeof(Bus))
+                {
+                    
+                    bus.Add((Bus)car);
+                }
+
+                if (car.GetType() == typeof(Truck))
+                {
+                    truck.Add((Truck)car);
+                }
+            }
+            var con 
         }
     }
 }

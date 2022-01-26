@@ -6,6 +6,8 @@ namespace ManagesCarPark
     public class PassengerCar : Car
     {
         private readonly string bodyType;
+
+        public PassengerCar(){}
         public PassengerCar(string automobileModel,
             string carType,
             string bodyType,

@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InputOutputString", "InputO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flight", "Flight\Flight.csproj", "{78987A39-B22A-4276-AB02-51E0D9D8AE9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{94E39895-52C1-449A-A249-11EA55A6B05E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{94E39895-52C1-449A-A249-11EA55A6B05E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{F30431B7-75D6-4012-BECA-7799CFABEA5F}"
+	ProjectSection(SolutionItems) = preProject
+		Tasks.docx = Tasks.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
