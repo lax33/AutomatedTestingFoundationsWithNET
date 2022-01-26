@@ -45,7 +45,7 @@ namespace Collections
 
             File.Delete("CapacityMore15.xml");
 
-            using (FileStream fl = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
+            using (FileStream fl = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate)) 
             {
                 foreach (Car car in collection)
                 {
@@ -58,9 +58,9 @@ namespace Collections
             }
 
            
-            foreach (var car in collection)
+            foreach (Car car in collection)
             {
-                if (car.GetType()== typeof(Bus))
+                if (car.GetType() == typeof(Bus))
                 {
                     
                     bus.Add((Bus)car);
@@ -71,7 +71,11 @@ namespace Collections
                     truck.Add((Truck)car);
                 }
             }
-            var con 
+
+            var con = (from b in bus
+                select new { b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber }).Concat(from t in truck
+                select new { t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
+
         }
     }
 }
