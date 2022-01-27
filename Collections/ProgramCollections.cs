@@ -68,8 +68,8 @@ namespace Collections
                 }
 
                 var con = (from b in bus
-                           select new { b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber }).Concat(from t in truck
-                                                                                                               select new { t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
+                        select new { b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber }).Concat(from t in truck
+                        select new { t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
                 foreach (var car in con)
                 {
                     XmlSerializer ser = new XmlSerializer(car.GetType());
