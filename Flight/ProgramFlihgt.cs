@@ -1,14 +1,10 @@
-﻿using System;
-
-namespace Flight
+﻿namespace Flight
 {
-    class ProgramFlihgt
+    internal class ProgramFlihgt
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Coordinate hj;
-
         }
     }
-
 }

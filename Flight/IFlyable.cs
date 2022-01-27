@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Flight
+﻿namespace Flight
 {
-    interface IFlyable
+    internal interface IFlyable
     {
         double FlyTo(Coordinate newPoint);
-        double GetFlyTime(Coordinate newPoint);
 
+        double GetFlyTime(Coordinate newPoint);
     }
 }

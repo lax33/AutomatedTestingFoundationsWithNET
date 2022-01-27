@@ -2,7 +2,7 @@
 
 namespace Flight
 {
-    class Airplane : IFlyable
+    internal class Airplane : IFlyable
     {
         private Coordinate currentPosition;
 
@@ -25,7 +25,7 @@ namespace Flight
 
         /// <summary>
         /// Airplane flight time.
-        /// The start speed is 200 km/h and it increases every 10 km by 10 km/h. 
+        /// The start speed is 200 km/h and it increases every 10 km by 10 km/h.
         /// </summary>
         /// <param name="newPoint"> New point coordinate </param>
         /// <returns> Value in hours </returns>
