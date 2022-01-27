@@ -4,7 +4,7 @@ namespace Flight
 {
     internal class Airplane : IFlyable
     {
-        private Coordinate currentPosition;
+        private readonly Coordinate currentPosition;
 
         public Airplane(Coordinate currentPosition)
         {
