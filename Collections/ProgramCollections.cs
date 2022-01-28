@@ -53,12 +53,11 @@ namespace Collections
                     }
                 }
 
-                var busTruckConcat = (from b in collection
-                           where b.GetType() == typeof(Bus)
-                           select new { b.automobileModel, b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber })
-                    .Concat(from t in collection
-                            where t.GetType() == typeof(Truck)
-                            select new { t.automobileModel, t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
+
+                var busTruckConcat = from car in collection
+                           where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
+                           select new { car.automobileModel, car.engine.typeEngin, car.engine.capacity, car.engine.serialNumber };
+                    
             }
 
 
