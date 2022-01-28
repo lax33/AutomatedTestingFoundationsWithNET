@@ -1,6 +1,4 @@
-﻿using System;
-using ManagesCarPark;
-using System.Collections;
+﻿using ManagesCarPark;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,10 +10,7 @@ namespace Collections
     {
         private static void Main(string[] args)
         {
-            List<Bus> bus = new List<Bus>();
-            List<Truck> truck = new List<Truck>();
-
-            ArrayList collection = new ArrayList()
+            List<Car> collection = new List<Car>()
             {
                     new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
                         new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
@@ -40,8 +35,6 @@ namespace Collections
                 new Transmission(TypeTransmission.automaticTransmission, 5, "Nissan"),
                 new Chassis(6, "656412", 15));
 
-            //List<Bus> Bus = new List<Bus>() { bus };
-            //object o = collection[0];
             File.Delete("CapacityMore151.xml");
             File.Delete("CapacityMore15.xml");
 
@@ -56,28 +49,19 @@ namespace Collections
                             XmlSerializer serializer = new XmlSerializer(car.GetType());
                             serializer.Serialize(fl, car);
                         }
-                        else if (car.GetType() == typeof(Bus))
-                        {
-                            bus.Add((Bus)car);
-                        }
-                        else if (car.GetType() == typeof(Truck))
-                        {
-                            truck.Add((Truck)car);
-                        }
+
                     }
                 }
 
-                var con = (from b in bus
-                        select new { b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber }).Concat(from t in truck
-                        select new { t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
-                foreach (var car in con)
-                {
-                    XmlSerializer ser = new XmlSerializer(car.GetType());
-                    ser.Serialize(fl1, car);
-                }
+                var busTruckConcat = (from b in collection
+                           where b.GetType() == typeof(Bus)
+                           select new { b.automobileModel, b.engine.typeEngin, b.engine.capacity, b.engine.serialNumber })
+                    .Concat(from t in collection
+                            where t.GetType() == typeof(Truck)
+                            select new { t.automobileModel, t.engine.typeEngin, t.engine.capacity, t.engine.serialNumber });
             }
 
-            
+
         }
     }
 }
