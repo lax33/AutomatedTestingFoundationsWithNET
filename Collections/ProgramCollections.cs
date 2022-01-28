@@ -46,18 +46,24 @@ namespace Collections
                     {
                         if (car.engine.capacity > 1.5)
                         {
-                            XmlSerializer serializer = new XmlSerializer(car.GetType());
-                            serializer.Serialize(fl, car);
+                            //XmlSerializer serializer = new XmlSerializer(car.GetType());
+                            //serializer.Serialize(fl, car);
                         }
 
                     }
                 }
 
-
+                
                 var busTruckConcat = from car in collection
                            where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
                            select new { car.automobileModel, car.engine.typeEngin, car.engine.capacity, car.engine.serialNumber };
-                    
+
+                foreach (var car in busTruckConcat)
+                {
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    serializer.Serialize(fl1, car);
+                }
+                
             }
 
 
