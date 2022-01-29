@@ -30,43 +30,77 @@ namespace Collections
                         new Chassis(2, "545486156", 0.15))
             };
 
-            Bus bus1 = new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
-                new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
-                new Transmission(TypeTransmission.automaticTransmission, 5, "Nissan"),
-                new Chassis(6, "656412", 15));
-
-            File.Delete("CapacityMore151.xml");
             File.Delete("CapacityMore15.xml");
+            File.Delete("EngineBusAndTruc.xml");
+            File.Delete("Transmition.xml");
 
-            using (FileStream fl1 = new FileStream("CapacityMore151.xml", FileMode.OpenOrCreate))
+            //
+            using (FileStream fileCapacityMore15 = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
             {
-                using (FileStream fl = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
-                {
-                    foreach (Car car in collection)
-                    {
-                        if (car.engine.capacity > 1.5)
-                        {
-                            //XmlSerializer serializer = new XmlSerializer(car.GetType());
-                            //serializer.Serialize(fl, car);
-                        }
-
-                    }
-                }
-
-                
-                var busTruckConcat = from car in collection
-                           where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
-                           select new { car.automobileModel, car.engine.typeEngin, car.engine.capacity, car.engine.serialNumber };
-
-                foreach (var car in busTruckConcat)
+                var capacityMore15 = from car in collection
+                                     where car.engine.capacity > 1.5
+                                     select car;
+                foreach (var car in capacityMore15)
                 {
                     XmlSerializer serializer = new XmlSerializer(car.GetType());
-                    serializer.Serialize(fl1, car);
+                    serializer.Serialize(fileCapacityMore15, car);
                 }
-                
+            };
+
+            //
+            using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
+            {
+                var engineBusAndTruck = from car1 in collection
+                                        where car1.GetType() == typeof(Bus) || car1.GetType() == typeof(Truck)
+                                        select new { car1.automobileModel, car1.engine.typeEngin, car1.engine.capacity, car1.engine.serialNumber };
+                foreach (var car2 in engineBusAndTruck)
+                {
+                    EngineBusAndTruc helper = new EngineBusAndTruc(car2.automobileModel, car2.typeEngin,
+                        car2.capacity, car2.serialNumber);
+                    XmlSerializer serializer = new XmlSerializer(typeof(EngineBusAndTruc));
+                    serializer.Serialize(fileEngineBusAndTruc, helper);
+                }
             }
 
+            //
+            using (FileStream fileTransmition = new FileStream("Transmition.xml", FileMode.OpenOrCreate))
+            {
+                var transmitionAuto = from car in collection
+                                      where car.transmission.typeTransmission == TypeTransmission.automaticTransmission
+                                      select new { car.automobileModel, car.transmission.typeTransmission };
+                foreach (var car in transmitionAuto)
+                {
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    serializer.Serialize(fileTransmition, car);
+                }
 
+                var transmitionManual = from car in collection
+                                        where car.transmission.typeTransmission == TypeTransmission.manualTransmission
+                                        select new { car.automobileModel, car.transmission.typeTransmission };
+                foreach (var car in transmitionManual)
+                {
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    serializer.Serialize(fileTransmition, car);
+                }
+
+                var transmitionRobotic = from car in collection
+                                         where car.transmission.typeTransmission == TypeTransmission.roboticTransmission
+                                         select new { car.automobileModel, car.transmission.typeTransmission };
+                foreach (var car in transmitionRobotic)
+                {
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    serializer.Serialize(fileTransmition, car);
+                }
+
+                var transmitionVariable = from car in collection
+                                          where car.transmission.typeTransmission == TypeTransmission.variableTransmission
+                                          select new { car.automobileModel, car.transmission.typeTransmission };
+                foreach (var car in transmitionVariable)
+                {
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    serializer.Serialize(fileTransmition, car);
+                }
+            };
         }
     }
 }

@@ -2,9 +2,10 @@
 
 namespace ManagesCarPark
 {
+    [Serializable]
     public class Truck : Car
     {
-        private readonly string typeTruck;
+        public string typeTruck;
 
         public Truck(){}
         public Truck(string automobileModel,

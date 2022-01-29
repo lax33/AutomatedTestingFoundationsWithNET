@@ -2,10 +2,10 @@
 
 namespace ManagesCarPark
 {
-
+    [Serializable]
     public class PassengerCar : Car
     {
-        private readonly string bodyType;
+       public string bodyType;
 
         public PassengerCar(){}
         public PassengerCar(string automobileModel,

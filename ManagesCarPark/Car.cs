@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace ManagesCarPark
 {
-    //[XmlInclude(typeof(Bus))]
+    [Serializable]
     public class Car
     {
         public string automobileModel;

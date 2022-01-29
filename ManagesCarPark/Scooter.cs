@@ -1,5 +1,8 @@
-﻿namespace ManagesCarPark
+﻿using System;
+
+namespace ManagesCarPark
 {
+    [Serializable]
     public class Scooter : Car
     {
         public Scooter(){}
