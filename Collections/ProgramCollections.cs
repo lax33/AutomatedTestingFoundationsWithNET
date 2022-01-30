@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -48,17 +49,29 @@ namespace Collections
             };
 
             //
+            //using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
+            //{
+            //    var engineBusAndTruck = from car1 in collection
+            //                            where car1.GetType() == typeof(Bus) || car1.GetType() == typeof(Truck)
+            //                            select new { car1.automobileModel, car1.engine.typeEngin, car1.engine.capacity, car1.engine.serialNumber };
+            //    foreach (var car2 in engineBusAndTruck)
+            //    {
+            //        EngineBusAndTruc helper = new EngineBusAndTruc(car2.automobileModel, car2.typeEngin,
+            //            car2.capacity, car2.serialNumber);
+            //        XmlSerializer serializer = new XmlSerializer(typeof(EngineBusAndTruc));
+            //        serializer.Serialize(fileEngineBusAndTruc, helper);
+            //    }
+            //}
+
             using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
             {
-                var engineBusAndTruck = from car1 in collection
-                                        where car1.GetType() == typeof(Bus) || car1.GetType() == typeof(Truck)
-                                        select new { car1.automobileModel, car1.engine.typeEngin, car1.engine.capacity, car1.engine.serialNumber };
-                foreach (var car2 in engineBusAndTruck)
+                var engineBusAndTruck = from car in collection
+                                        where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
+                                        select car.engine;
+                foreach (var car in engineBusAndTruck)
                 {
-                    EngineBusAndTruc helper = new EngineBusAndTruc(car2.automobileModel, car2.typeEngin,
-                        car2.capacity, car2.serialNumber);
-                    XmlSerializer serializer = new XmlSerializer(typeof(EngineBusAndTruc));
-                    serializer.Serialize(fileEngineBusAndTruc, helper);
+                    XmlSerializer serializer = new XmlSerializer(typeof(Engine));
+                    serializer.Serialize(fileEngineBusAndTruc, car);
                 }
             }
 
@@ -67,37 +80,37 @@ namespace Collections
             {
                 var transmitionAuto = from car in collection
                                       where car.transmission.typeTransmission == TypeTransmission.automaticTransmission
-                                      select new { car.automobileModel, car.transmission.typeTransmission };
+                                      select car.transmission;
                 foreach (var car in transmitionAuto)
                 {
-                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionManual = from car in collection
                                         where car.transmission.typeTransmission == TypeTransmission.manualTransmission
-                                        select new { car.automobileModel, car.transmission.typeTransmission };
+                                        select car.transmission;
                 foreach (var car in transmitionManual)
                 {
-                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionRobotic = from car in collection
                                          where car.transmission.typeTransmission == TypeTransmission.roboticTransmission
-                                         select new { car.automobileModel, car.transmission.typeTransmission };
+                                         select car.transmission;
                 foreach (var car in transmitionRobotic)
                 {
-                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionVariable = from car in collection
                                           where car.transmission.typeTransmission == TypeTransmission.variableTransmission
-                                          select new { car.automobileModel, car.transmission.typeTransmission };
+                                          select car.transmission;
                 foreach (var car in transmitionVariable)
                 {
-                    XmlSerializer serializer = new XmlSerializer(car.GetType());
+                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
                     serializer.Serialize(fileTransmition, car);
                 }
             };

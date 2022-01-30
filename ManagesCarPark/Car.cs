@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace ManagesCarPark
 {
-    [Serializable]
+    //[Serializable]
     public class Car
     {
         public string automobileModel;
