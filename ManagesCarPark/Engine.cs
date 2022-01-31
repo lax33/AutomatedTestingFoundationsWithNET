@@ -7,7 +7,7 @@
         public string typeEngin;
         public long serialNumber;
 
-        public Engine(){}
+        public Engine() { }
         public Engine(int power, double capacity, string typeEngin, long serialNumber)
         {
             this.power = power;

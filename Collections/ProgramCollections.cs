@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Sockets;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -17,6 +16,10 @@ namespace Collections
                         new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
                         new Transmission(TypeTransmission.automaticTransmission, 5, "Nissan"),
                         new Chassis(6, "656412", 15)),
+                    new Bus("Mazda", TypeCar.bus, "Yellow", "2006", "35",
+                        new Engine(220, 2.5, TypeEnine.diesel, 52348736915),
+                        new Transmission(TypeTransmission.roboticTransmission, 6, Manufacturer.nissan),
+                        new Chassis(6, "8215479325", 10)),
                     new PassengerCar("Ford", TypeCar.passengerCar, BodyTypePassCar.jeep, "White", "2006",
                         new Engine(160, 2.0, TypeEnine.gas, 798852123),
                         new Transmission(TypeTransmission.manualTransmission,6, "Renault"),
@@ -25,17 +28,21 @@ namespace Collections
                         new Engine(300, 3.0, TypeEnine.diesel, 89235487),
                         new Transmission(TypeTransmission.manualTransmission, 4, Manufacturer.nissan),
                         new Chassis(6, "8521347", 25)),
-                    new Scooter("Minsk", TypeCar.scuter, "Green", "2020",
+                    new Scooter("Minsk", TypeCar.scuter, "Brown", "2020",
                         new Engine(15, 0.4, TypeEnine.gas, 45716334),
                         new Transmission(TypeTransmission.variableTransmission, 0, Manufacturer.renault),
-                        new Chassis(2, "545486156", 0.15))
+                        new Chassis(2, "545486156", 0.15)),
+                    new Scooter("Renault", TypeCar.scuter, "Green", "2020",
+                        new Engine(25, 0.6, TypeEnine.gas, 45716334),
+                        new Transmission(TypeTransmission.variableTransmission, 0, Manufacturer.renault),
+                        new Chassis(2, "545486156", 0.18))
             };
 
             File.Delete("CapacityMore15.xml");
             File.Delete("EngineBusAndTruc.xml");
             File.Delete("Transmition.xml");
 
-            //
+            // engine capacity greater than 1.5 liters
             using (FileStream fileCapacityMore15 = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
             {
                 var capacityMore15 = from car in collection
@@ -48,21 +55,7 @@ namespace Collections
                 }
             };
 
-            //
-            //using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
-            //{
-            //    var engineBusAndTruck = from car1 in collection
-            //                            where car1.GetType() == typeof(Bus) || car1.GetType() == typeof(Truck)
-            //                            select new { car1.automobileModel, car1.engine.typeEngin, car1.engine.capacity, car1.engine.serialNumber };
-            //    foreach (var car2 in engineBusAndTruck)
-            //    {
-            //        EngineBusAndTruc helper = new EngineBusAndTruc(car2.automobileModel, car2.typeEngin,
-            //            car2.capacity, car2.serialNumber);
-            //        XmlSerializer serializer = new XmlSerializer(typeof(EngineBusAndTruc));
-            //        serializer.Serialize(fileEngineBusAndTruc, helper);
-            //    }
-            //}
-
+            // engines of bus and truck
             using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
             {
                 var engineBusAndTruck = from car in collection
@@ -75,7 +68,7 @@ namespace Collections
                 }
             }
 
-            //
+            // sorting by transmission type
             using (FileStream fileTransmition = new FileStream("Transmition.xml", FileMode.OpenOrCreate))
             {
                 var transmitionAuto = from car in collection

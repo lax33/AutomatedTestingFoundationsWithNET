@@ -7,7 +7,9 @@ namespace ManagesCarPark
     {
         public string typeTruck;
 
-        public Truck(){}
+        public Truck()
+        { }
+
         public Truck(string automobileModel,
             string carType,
             string typeTruck,
@@ -21,6 +23,7 @@ namespace ManagesCarPark
         {
             this.typeTruck = typeTruck;
         }
+
         public override void Print()
         {
             Console.WriteLine("Automobile model - " + automobileModel);

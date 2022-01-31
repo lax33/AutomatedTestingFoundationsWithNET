@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Xml.Serialization;
 
 namespace ManagesCarPark
 {
-    //[Serializable]
     public class Car
     {
         public string automobileModel;
@@ -15,7 +13,9 @@ namespace ManagesCarPark
         public Transmission transmission;
         public Chassis chassis;
 
-        public Car(){}
+        public Car()
+        { }
+
         public Car(string automobileModel, string carType, string automobileColor, string automobileYear,
                         Engine engine, Transmission transmission, Chassis chassis)
         {
@@ -27,6 +27,7 @@ namespace ManagesCarPark
             this.transmission = transmission;
             this.chassis = chassis;
         }
+
         public virtual void Print()
         {
             Console.WriteLine("Automobile model - " + automobileModel);

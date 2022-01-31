@@ -6,7 +6,7 @@
         public string numberChassis;
         public double permissibleLoad;
 
-        public Chassis(){}
+        public Chassis() { }
         public Chassis(int wheelsNumber, string numberChassis, double permissibleLoad)
         {
             this.wheelsNumber = wheelsNumber;

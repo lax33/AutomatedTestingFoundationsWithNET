@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Flight
 {
@@ -37,9 +35,9 @@ namespace Flight
             const int speedDrone = 100;
             double dist10 = speedDrone * 0.166; // the distance flight for 10 minite in hours
 
-            double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) + 
+            double distance = Math.Pow(Math.Pow(currentPosition.x - newPoint.x, 2) +
                                        Math.Pow(currentPosition.y - newPoint.y, 2) +
-                                       Math.Pow(currentPosition.z - newPoint.z, 2), 0.5); 
+                                       Math.Pow(currentPosition.z - newPoint.z, 2), 0.5);
 
             int timeWait = (int)(Math.Floor(distance / dist10) * 0.016); // waiting time in hours
             double timeFlight = distance / speedDrone;                   // flight time  

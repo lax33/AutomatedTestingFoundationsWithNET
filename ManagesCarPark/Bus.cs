@@ -7,7 +7,8 @@ namespace ManagesCarPark
     {
         public string numberOfSeats;
 
-        public Bus() {}
+        public Bus()
+        { }
 
         public Bus(string automobileModel,
             string carType,

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Collections
 {
@@ -14,14 +10,14 @@ namespace Collections
         public double capacity;
         public long serialNumber;
 
-        public EngineBusAndTruc(){}
+        public EngineBusAndTruc() { }
 
-       public EngineBusAndTruc(string automobileModel, string typeEngin, double capacity, long serialNumber)
-       {
-            this.automobileModel= automobileModel;
-            this.typeEngin= typeEngin;
-            this.capacity= capacity;
-            this.serialNumber= serialNumber;
-       }
+        public EngineBusAndTruc(string automobileModel, string typeEngin, double capacity, long serialNumber)
+        {
+            this.automobileModel = automobileModel;
+            this.typeEngin = typeEngin;
+            this.capacity = capacity;
+            this.serialNumber = serialNumber;
+        }
     }
 }

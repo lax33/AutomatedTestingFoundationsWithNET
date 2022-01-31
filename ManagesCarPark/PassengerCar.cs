@@ -5,9 +5,11 @@ namespace ManagesCarPark
     [Serializable]
     public class PassengerCar : Car
     {
-       public string bodyType;
+        public string bodyType;
 
-        public PassengerCar(){}
+        public PassengerCar()
+        { }
+
         public PassengerCar(string automobileModel,
             string carType,
             string bodyType,
@@ -20,6 +22,7 @@ namespace ManagesCarPark
         {
             this.bodyType = bodyType;
         }
+
         public override void Print()
         {
             Console.WriteLine("Automobile model - " + automobileModel);

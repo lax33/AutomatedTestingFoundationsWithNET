@@ -5,7 +5,9 @@ namespace ManagesCarPark
     [Serializable]
     public class Scooter : Car
     {
-        public Scooter(){}
+        public Scooter()
+        { }
+
         public Scooter(string automobileModel,
             string carType,
             string automobileColor,
