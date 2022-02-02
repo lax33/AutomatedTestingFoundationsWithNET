@@ -1,7 +1,9 @@
-﻿using ManagesCarPark;
+﻿using System;
+using ManagesCarPark;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -42,7 +44,7 @@ namespace Collections
             File.Delete("EngineBusAndTruc.xml");
             File.Delete("Transmition.xml");
 
-            // engine capacity greater than 1.5 liters
+            // car with engine capacity greater than 1.5 liters
             using (FileStream fileCapacityMore15 = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
             {
                 var capacityMore15 = from car in collection
@@ -67,43 +69,43 @@ namespace Collections
                     serializer.Serialize(fileEngineBusAndTruc, car);
                 }
             }
-
+            
             // sorting by transmission type
             using (FileStream fileTransmition = new FileStream("Transmition.xml", FileMode.OpenOrCreate))
             {
                 var transmitionAuto = from car in collection
                                       where car.transmission.typeTransmission == TypeTransmission.automaticTransmission
-                                      select car.transmission;
+                                      select car;
                 foreach (var car in transmitionAuto)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionManual = from car in collection
                                         where car.transmission.typeTransmission == TypeTransmission.manualTransmission
-                                        select car.transmission;
+                                        select car;
                 foreach (var car in transmitionManual)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionRobotic = from car in collection
                                          where car.transmission.typeTransmission == TypeTransmission.roboticTransmission
-                                         select car.transmission;
+                                         select car;
                 foreach (var car in transmitionRobotic)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
                     serializer.Serialize(fileTransmition, car);
                 }
 
                 var transmitionVariable = from car in collection
                                           where car.transmission.typeTransmission == TypeTransmission.variableTransmission
-                                          select car.transmission;
+                                          select car;
                 foreach (var car in transmitionVariable)
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(Transmission));
+                    XmlSerializer serializer = new XmlSerializer(car.GetType());
                     serializer.Serialize(fileTransmition, car);
                 }
             };
