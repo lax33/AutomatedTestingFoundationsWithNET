@@ -1,8 +1,24 @@
 {
   "profiles": {
-    "NumberSystemConversion": {
+    "BNS 2": {
       "commandName": "Project",
-      "commandLineArgs": "125 16"
+      "commandLineArgs": "56 2"
+    },
+    "BNS 16": {
+      "commandName": "Project",
+      "commandLineArgs": "56 16"
+    },
+    "BNS 8": {
+      "commandName": "Project",
+      "commandLineArgs": "56 8"
+    },
+    "Err number": {
+      "commandName": "Project",
+      "commandLineArgs": "r 2"
+    },
+    "Err base": {
+      "commandName": "Project",
+      "commandLineArgs": "56 sd"
     }
   }
 }
