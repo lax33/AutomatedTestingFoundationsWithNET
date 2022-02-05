@@ -10,24 +10,29 @@ namespace NumberSystemConversion
             int number;
             int baseNumber;
 
-            Console.Write("Enter the number - ");
-            while (int.TryParse(Console.ReadLine(), out number) != true)
+            if (int.TryParse(args[0], out number) != true)
             {
-                Console.WriteLine(" Incorrect data, please re-enter!");
+                Console.WriteLine(" Incorrect the number, please re-enter!");
+                Console.ReadLine();
+                return;
             }
 
-            Console.Write("A base number system - ");
-            while (int.TryParse(Console.ReadLine(), out baseNumber) != true ||
-                                                                baseNumber < 2 ||
-                                                                baseNumber > 20 ||
-                                                                baseNumber == 10)
+            if (int.TryParse(args[1], out baseNumber) != true || baseNumber < 2 ||
+                     baseNumber > 20 ||
+                     baseNumber == 10)
             {
-                Console.WriteLine(" Incorrect data, please re-enter!");
+                Console.WriteLine(" Incorrect the number system base, please re-enter!");
+                Console.ReadLine();
+                return;
             }
+
+            Console.WriteLine($"The number - {number}");
+            Console.WriteLine($"The base number system - {baseNumber}");
 
             ResultOfTransferToAnotherSystemOutput(number, baseNumber);
 
             Console.ReadLine();
+
 
 
             void ResultOfTransferToAnotherSystemOutput(int numberL, int baseNumberL)
@@ -43,7 +48,7 @@ namespace NumberSystemConversion
                 } while (baseNumberL <= wholePart);
                 list.Add(wholePart);
 
-                Console.Write("Result - ");
+                Console.Write("The Result - ");
 
                 if (baseNumberL <= 10)
                 {
@@ -61,33 +66,43 @@ namespace NumberSystemConversion
                             case 10:
                                 Console.Write("A");
                                 break;
+
                             case 11:
                                 Console.Write("B");
                                 break;
+
                             case 12:
                                 Console.Write("C");
                                 break;
+
                             case 13:
                                 Console.Write("D");
                                 break;
+
                             case 14:
                                 Console.Write("E");
                                 break;
+
                             case 15:
                                 Console.Write("F");
                                 break;
+
                             case 16:
                                 Console.Write("G");
                                 break;
+
                             case 17:
                                 Console.Write("H");
                                 break;
+
                             case 18:
                                 Console.Write("I");
                                 break;
+
                             case 19:
                                 Console.Write("J");
                                 break;
+
                             default:
                                 Console.Write(list[i]);
                                 break;

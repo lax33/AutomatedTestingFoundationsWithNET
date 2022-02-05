@@ -1,9 +1,7 @@
-﻿using System;
-using ManagesCarPark;
+﻿using ManagesCarPark;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime;
 using System.Xml.Serialization;
 
 namespace Collections
@@ -69,7 +67,7 @@ namespace Collections
                     serializer.Serialize(fileEngineBusAndTruc, car);
                 }
             }
-            
+
             // sorting by transmission type
             using (FileStream fileTransmition = new FileStream("Transmition.xml", FileMode.OpenOrCreate))
             {
