@@ -10,7 +10,7 @@ namespace Collections
     {
         private static void Main(string[] args)
         {
-            List<Car> collection = new List<Car>()
+            List<Car> collectionCars = new List<Car>()
             {
                     new Bus("Nissan", TypeCar.bus, "blue", "2011", "30",
                         new Engine(300, 3.5, TypeEnine.diesel, 4562121831),
@@ -45,7 +45,7 @@ namespace Collections
             // car with engine capacity greater than 1.5 liters
             using (FileStream fileCapacityMore15 = new FileStream("CapacityMore15.xml", FileMode.OpenOrCreate))
             {
-                var capacityMore15 = from car in collection
+                var capacityMore15 = from car in collectionCars
                                      where car.engine.capacity > 1.5
                                      select car;
                 foreach (var car in capacityMore15)
@@ -58,7 +58,7 @@ namespace Collections
             // engines of bus and truck
             using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
             {
-                var engineBusAndTruck = from car in collection
+                var engineBusAndTruck = from car in collectionCars
                                         where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
                                         select car.engine;
                 foreach (var car in engineBusAndTruck)
@@ -71,7 +71,7 @@ namespace Collections
             // sorting by transmission type
             using (FileStream fileTransmition = new FileStream("Transmition.xml", FileMode.OpenOrCreate))
             {
-                var transmitionAuto = from car in collection
+                var transmitionAuto = from car in collectionCars
                                       where car.transmission.typeTransmission == TypeTransmission.automaticTransmission
                                       select car;
                 foreach (var car in transmitionAuto)
@@ -80,7 +80,7 @@ namespace Collections
                     serializer.Serialize(fileTransmition, car);
                 }
 
-                var transmitionManual = from car in collection
+                var transmitionManual = from car in collectionCars
                                         where car.transmission.typeTransmission == TypeTransmission.manualTransmission
                                         select car;
                 foreach (var car in transmitionManual)
@@ -89,7 +89,7 @@ namespace Collections
                     serializer.Serialize(fileTransmition, car);
                 }
 
-                var transmitionRobotic = from car in collection
+                var transmitionRobotic = from car in collectionCars
                                          where car.transmission.typeTransmission == TypeTransmission.roboticTransmission
                                          select car;
                 foreach (var car in transmitionRobotic)
@@ -98,7 +98,7 @@ namespace Collections
                     serializer.Serialize(fileTransmition, car);
                 }
 
-                var transmitionVariable = from car in collection
+                var transmitionVariable = from car in collectionCars
                                           where car.transmission.typeTransmission == TypeTransmission.variableTransmission
                                           select car;
                 foreach (var car in transmitionVariable)
