@@ -10,14 +10,14 @@ namespace ManagesCarPark
         public Bus()
         { }
 
-        public Bus(string automobileModel,
-            string carType,
+        public Bus(string carModel,
+            string typeCar,
             string automobileColor,
             string automobileYear,
             string numberOfSeats,
             Engine engine,
             Transmission transmission,
-            Chassis chassis) : base(automobileModel, carType,
+            Chassis chassis) : base(carModel, typeCar,
                                             automobileColor, automobileYear,
                                             engine, transmission, chassis)
         {
@@ -26,8 +26,8 @@ namespace ManagesCarPark
 
         public override void Print()
         {
-            Console.WriteLine("Automobile model - " + automobileModel);
-            Console.WriteLine("Car type - " + carType);
+            Console.WriteLine("Automobile model - " + carModel);
+            Console.WriteLine("Car type - " + typeCar);
             Console.WriteLine("Color - " + automobileColor);
             Console.WriteLine("Automobile Year - " + automobileYear);
             Console.WriteLine("Number of seats - " + numberOfSeats);

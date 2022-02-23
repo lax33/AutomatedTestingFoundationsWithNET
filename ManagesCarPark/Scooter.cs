@@ -8,13 +8,13 @@ namespace ManagesCarPark
         public Scooter()
         { }
 
-        public Scooter(string automobileModel,
-            string carType,
+        public Scooter(string carModel,
+            string typeCar,
             string automobileColor,
             string automobileYear,
             Engine engine,
             Transmission transmission,
-            Chassis chassis) : base(automobileModel, carType, automobileColor, automobileYear,
+            Chassis chassis) : base(carModel, typeCar, automobileColor, automobileYear,
             engine, transmission, chassis)
         {
         }

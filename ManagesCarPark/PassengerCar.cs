@@ -5,29 +5,30 @@ namespace ManagesCarPark
     [Serializable]
     public class PassengerCar : Car
     {
-        public string bodyType;
+        public string bodyTypePassCar;
 
         public PassengerCar()
         { }
 
-        public PassengerCar(string automobileModel,
-            string carType,
-            string bodyType,
+        public PassengerCar(string carModel,
+            string typeCar,
+            string bodyTypePassCar,
             string automobileColor,
             string automobileYear,
             Engine engine,
             Transmission transmission,
-            Chassis chassis) : base(automobileModel, carType, automobileColor, automobileYear,
+            Chassis chassis) : base(carModel, typeCar, automobileColor, automobileYear,
                                     engine, transmission, chassis)
         {
-            this.bodyType = bodyType;
+
+            this.bodyTypePassCar = bodyTypePassCar;
         }
 
         public override void Print()
         {
-            Console.WriteLine("Automobile model - " + automobileModel);
-            Console.WriteLine("Car type - " + carType);
-            Console.WriteLine("Body type - " + bodyType);
+            Console.WriteLine("Automobile model - " + carModel);
+            Console.WriteLine("Car type - " + typeCar);
+            Console.WriteLine("Body type - " + bodyTypePassCar);
             Console.WriteLine("Color - " + automobileColor);
             Console.WriteLine("Automobile Year - " + automobileYear);
             Console.WriteLine("Engine power - " + engine.power + " HP");

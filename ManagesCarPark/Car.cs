@@ -4,8 +4,8 @@ namespace ManagesCarPark
 {
     public class Car
     {
-        public string automobileModel;
-        public string carType;
+        public string carModel;
+        public string typeCar;
         public string automobileColor;
         public string automobileYear;
         public string vin;
@@ -16,11 +16,11 @@ namespace ManagesCarPark
         public Car()
         { }
 
-        public Car(string automobileModel, string carType, string automobileColor, string automobileYear,
+        public Car(string carModel, string typeCar, string automobileColor, string automobileYear,
                         Engine engine, Transmission transmission, Chassis chassis)
         {
-            this.automobileModel = automobileModel;
-            this.carType = carType;
+            this.carModel = carModel;
+            this.typeCar = typeCar;
             this.automobileColor = automobileColor;
             this.automobileYear = automobileYear;
             this.engine = engine;
@@ -30,8 +30,8 @@ namespace ManagesCarPark
 
         public virtual void Print()
         {
-            Console.WriteLine("Automobile model - " + automobileModel);
-            Console.WriteLine("Car type - " + carType);
+            Console.WriteLine("Automobile model - " + carModel);
+            Console.WriteLine("Car type - " + typeCar);
             Console.WriteLine("Color - " + automobileColor);
             Console.WriteLine("Automobile Year - " + automobileYear);
             Console.WriteLine("Engine power - " + engine.power + " HP");
