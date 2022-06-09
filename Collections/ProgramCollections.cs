@@ -24,7 +24,7 @@ namespace Collections
                         new Engine(160, 2.0, TypeEnine.gas, 798852123),
                         new Transmission(TypeTransmission.manualTransmission,6, "Renault"),
                         new Chassis(4, "985456", 2.5)),
-                    new Truck(CarModel.renault, TypeCar.truck, TypeTruck.wagon, "blue", "2012",
+                    new TruckCar(CarModel.renault, TypeCar.truck, TypeTruck.wagon, "blue", "2012",
                         new Engine(300, 3.0, TypeEnine.diesel, 89235487),
                         new Transmission(TypeTransmission.manualTransmission, 4, Manufacturer.nissan),
                         new Chassis(6, "8521347", 25)),
@@ -59,7 +59,7 @@ namespace Collections
             using (FileStream fileEngineBusAndTruc = new FileStream("EngineBusAndTruc.xml", FileMode.OpenOrCreate))
             {
                 var engineBusAndTruck = from car in collectionCars
-                                        where car.GetType() == typeof(Bus) || car.GetType() == typeof(Truck)
+                                        where car.GetType() == typeof(Bus) || car.GetType() == typeof(TruckCar)
                                         select car.engine;
                 foreach (var car in engineBusAndTruck)
                 {

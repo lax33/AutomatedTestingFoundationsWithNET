@@ -13,7 +13,7 @@ namespace ManagesCarPark
                     new Chassis(4, "85214", 1.5));
 
             // Truck Renault
-            Truck truckRenault = new Truck(CarModel.renault, TypeCar.truck, TypeTruck.wagon, "blue", "2012",
+            TruckCar truckRenault = new TruckCar(CarModel.renault, TypeCar.truck, TypeTruck.wagon, "blue", "2012",
                 new Engine(300, 3.0, TypeEnine.diesel, 89235487),
                 new Transmission(TypeTransmission.manualTransmission, 4, Manufacturer.nissan),
                 new Chassis(6, "8521347", 25));

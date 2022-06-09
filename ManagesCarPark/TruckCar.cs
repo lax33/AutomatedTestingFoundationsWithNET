@@ -3,14 +3,14 @@
 namespace ManagesCarPark
 {
     [Serializable]
-    public class Truck : Car
+    public class TruckCar : Car
     {
         public string typeTruck;
 
-        public Truck()
+        public TruckCar()
         { }
 
-        public Truck(string carModel,
+        public TruckCar(string carModel,
             string typeCar,
             string typeTruck,
             string automobileColor,
