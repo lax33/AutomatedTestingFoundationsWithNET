@@ -38,6 +38,10 @@ namespace ObjectOrientedDesignPrinciples
                         amountPriceType /= amountCarType;
                         Console.WriteLine($"The average cost of '{typecar}' - {amountPriceType / amountCarType}");
                     }
+                    else
+                    {
+                        break;
+                    }
                 }
             }
             typeCar.Clear(); //cleaning array for using later
