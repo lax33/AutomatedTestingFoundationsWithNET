@@ -33,9 +33,7 @@ namespace ObjectOrientedDesignPrinciples
                             {
                                 amountCarType++;
                                 amountPriceType += ca.Price;
-
                             }
-
                         }
                         amountPriceType /= amountCarType;
                         Console.WriteLine($"The average cost of '{typecar}' - {amountPriceType / amountCarType}");
