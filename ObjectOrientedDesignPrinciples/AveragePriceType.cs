@@ -6,7 +6,7 @@ namespace ObjectOrientedDesignPrinciples
     public class AveragePriceType : ICommand
     {
         private List<string> typeCar;
-        private double averagePriceType;
+        private double amountPriceType;
         private readonly List<Car> cars;
 
         public AveragePriceType(List<Car> cars)
@@ -16,7 +16,7 @@ namespace ObjectOrientedDesignPrinciples
 
         public void ExecuteCom()
         {
-            int amountCarType = 0;
+            int amountCarType = 0; // number of car type
             foreach (var car in cars)
             {
                 string typecar = car.Type; //выбираем текущий тип с которым будем работать 
@@ -32,16 +32,15 @@ namespace ObjectOrientedDesignPrinciples
                             if (typecar == ca.Type) // search in 'cars' array and add price
                             {
                                 amountCarType++;
-                                averagePriceType += ca.Price;
+                                amountPriceType += ca.Price;
 
                             }
 
                         }
-                        averagePriceType /= cars.Count;
-                        Console.WriteLine($"The average cost of '{typecar}' - {averagePriceType}");
+                        amountPriceType /= amountCarType;
+                        Console.WriteLine($"The average cost of '{typecar}' - {amountPriceType / amountCarType}");
                     }
                 }
-
             }
             typeCar.Clear(); //cleaning array for using later
         }
