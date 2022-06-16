@@ -7,17 +7,17 @@ namespace ObjectOrientedDesignPrinciples
     {
         private List<string> typeCar;
         private double amountPriceType;
-        private readonly List<Car> cars;
+       
 
-        public AveragePriceType(List<Car> cars)
-        {
-            this.cars = cars;
-        }
+        //public AveragePriceType(List<Car> cars)
+        //{
+        //    this.cars = cars;
+        //}
 
-        public void ExecuteCom()
+        public void ExecuteCom(Cars cars)
         {
             int amountCarType = 0; // number of car type
-            foreach (var car in cars)
+            foreach (var car in cars.ArrayCars)
             {
                 string typecar = car.Type; //выбираем текущий тип с которым будем работать 
 
@@ -27,7 +27,7 @@ namespace ObjectOrientedDesignPrinciples
                     {
                         typeCar.Add(car.Type); // if we do not worked with this type, adding to  'typeCar' array
 
-                        foreach (var ca in cars)
+                        foreach (var ca in cars.ArrayCars)
                         {
                             if (typecar == ca.Type) // search in 'cars' array and add price
                             {

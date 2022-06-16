@@ -2,6 +2,6 @@
 {
     public interface ICommand
     {
-        void ExecuteCom();
+        void ExecuteCom(Cars cars);
     }
 }
