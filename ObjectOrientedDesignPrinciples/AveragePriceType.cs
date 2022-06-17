@@ -6,7 +6,9 @@ namespace ObjectOrientedDesignPrinciples
     public class AveragePriceType : ICommand
     {
         private Dictionary<string, int> typeCar_amountCarType;
+        private List<double> avarigePricetype;
         private double amountPriceType;
+
 
         //public AveragePriceType(List<Car> cars)
         //{
@@ -32,8 +34,11 @@ namespace ObjectOrientedDesignPrinciples
                                 amountPriceType += ca.Price;
                             }
                         }
+                        //amountPriceType /= amountCarType;
+                        avarigePricetype.Add(amountPriceType /= amountCarType);
                         typeCar_amountCarType.Add(typecar, amountCarType); // if we do not worked with this type, adding to  'typeCar' array
-                        amountPriceType /= amountCarType;
+                        
+
                         Console.WriteLine($"The average cost of '{typecar}' - {amountPriceType / amountCarType}");
                         amountCarType = 0;
                     }
@@ -44,6 +49,12 @@ namespace ObjectOrientedDesignPrinciples
                 }
             }
             //typeCar.Clear(); //cleaning array for using later
+        }
+
+        public void Print()
+        {
+
+            Console.WriteLine($"The average cost of '{typeCar_amountCarType.Keys}' - {avarigePricetype[]}");
         }
     }
 }
