@@ -29,16 +29,8 @@
   <Class Name="ObjectOrientedDesignPrinciples.AveragePrice">
     <Position X="10.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAAAAAAA=</HashCode>
       <FileName>AveragePrice.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="ObjectOrientedDesignPrinciples.AveragePriceType">
-    <Position X="10.5" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAACAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
-      <FileName>AveragePriceType.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
