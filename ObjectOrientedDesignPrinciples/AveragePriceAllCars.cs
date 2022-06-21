@@ -2,7 +2,7 @@
 
 namespace ObjectOrientedDesignPrinciples
 {
-    public class AveragePrice : ICommand
+    public class AveragePriceAllCars : ICommand
     {
         private int amountPrice;
 

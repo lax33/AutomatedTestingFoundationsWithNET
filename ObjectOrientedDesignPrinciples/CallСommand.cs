@@ -16,9 +16,9 @@ namespace ObjectOrientedDesignPrinciples
 
                 case "count all": this.command = new CountAll(); break;
 
-                case "average price": this.command = new AveragePrice(); break;
+                case "average price": this.command = new AveragePriceAllCars(); break;
 
-                case "average price type": this.command = new AveragePriceType(); break;
+                case "average price type": this.command = new AveragePriceTypes(); break;
 
                 default: Console.WriteLine("No such command"); break;
             }

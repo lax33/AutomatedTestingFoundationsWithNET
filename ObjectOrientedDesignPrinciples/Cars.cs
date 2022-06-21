@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace ObjectOrientedDesignPrinciples
             }
         }
 
-        public void AddCars(Car car)
+        public void AddCar(Car car)
         {
             cars.Add(car);
         }
