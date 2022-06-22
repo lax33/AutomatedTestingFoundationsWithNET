@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ObjectOrientedDesignPrinciples
 {
@@ -12,16 +13,17 @@ namespace ObjectOrientedDesignPrinciples
         //{
         //    this.cars = cars;
         //}
-        private readonly TypeAvPriceAmount feature = new();
+        //private readonly TypeAvPriceAmount feature = new();
+        private TypeAvPriceAmount feature;
 
         public void ExecuteCom(Cars cars)
         {
-            feature.Execute(cars);
+            feature = TypeAvPriceAmount.Execute(cars);
         }
 
         public void Print()
         {
-            foreach (var typeC in feature.typeCar_amountCarType_averigePrice)
+            foreach (var typeC in feature)
             {
                 Console.WriteLine($"The average cost of '{typeC.Type}' - {typeC.AverigePrice}");
             }

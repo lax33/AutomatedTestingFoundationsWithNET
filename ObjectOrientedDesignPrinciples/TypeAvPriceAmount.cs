@@ -13,11 +13,18 @@ namespace ObjectOrientedDesignPrinciples
 
         public double AverigePrice;
 
-        public List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice; // contains computed values by type
-        private double amountPriceType;
+        private static List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice;
 
-        public void Execute(Cars cars)
+        //protected static List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice; // contains computed values by type
+        //private double amountPriceType;
+
+        public static TypeAvPriceAmount Execute(Cars cars)
         {
+
+        double amountPriceType = 0;
+
+         TypeAvPriceAmount carFeature = new ();
+         
             foreach (var car in cars.ArrayCars)
             {
                 int amountCarType = 0; // number of car type
@@ -35,12 +42,11 @@ namespace ObjectOrientedDesignPrinciples
                                 amountPriceType += ca.Price;
                             }
                         }
-                        var carFeature = new TypeAvPriceAmount()
-                        {
-                            Type = typecar,
-                            Amount = amountCarType,
-                            AverigePrice = amountPriceType /= amountCarType  // type's averige price
-                        };
+
+                        carFeature.Type = typecar;
+                        carFeature.Amount = amountCarType;
+                        carFeature.AverigePrice = amountPriceType /= amountCarType;  // type's averige price
+                        
 
                         typeCar_amountCarType_averigePrice.Add(carFeature);
 
@@ -52,6 +58,8 @@ namespace ObjectOrientedDesignPrinciples
                     }
                 }
             }
+
+            return carFeature;
         }
     }
 }
