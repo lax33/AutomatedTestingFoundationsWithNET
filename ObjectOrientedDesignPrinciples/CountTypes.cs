@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ObjectOrientedDesignPrinciples
 {
@@ -11,6 +10,7 @@ namespace ObjectOrientedDesignPrinciples
         {
             feature.Execute(cars);
         }
+
         public void Print()
         {
             foreach (var typeC in feature.typeCar_amountCarType_averigePrice)

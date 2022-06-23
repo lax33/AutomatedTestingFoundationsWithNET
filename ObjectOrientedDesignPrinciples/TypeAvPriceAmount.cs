@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ObjectOrientedDesignPrinciples
 {
@@ -13,18 +10,17 @@ namespace ObjectOrientedDesignPrinciples
 
         public double AverigePrice;
 
-        private static List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice;
+        public List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice;
 
         //protected static List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice; // contains computed values by type
         //private double amountPriceType;
 
-        public static TypeAvPriceAmount Execute(Cars cars)
+        public void Execute(Cars cars)
         {
+            double amountPriceType = 0;
 
-        double amountPriceType = 0;
+            //TypeAvPriceAmount carFeature = new ();
 
-         TypeAvPriceAmount carFeature = new ();
-         
             foreach (var car in cars.ArrayCars)
             {
                 int amountCarType = 0; // number of car type
@@ -43,14 +39,13 @@ namespace ObjectOrientedDesignPrinciples
                             }
                         }
 
-                        carFeature.Type = typecar;
-                        carFeature.Amount = amountCarType;
-                        carFeature.AverigePrice = amountPriceType /= amountCarType;  // type's averige price
-                        
-
+                        TypeAvPriceAmount carFeature = new()
+                        {
+                            Type = typecar,
+                            Amount = amountCarType,
+                            AverigePrice = amountPriceType /= amountCarType // type's averige price
+                        };
                         typeCar_amountCarType_averigePrice.Add(carFeature);
-
-                        Console.WriteLine($"The average cost of '{typecar}' - {amountPriceType / amountCarType}");
                     }
                     else
                     {
@@ -58,8 +53,6 @@ namespace ObjectOrientedDesignPrinciples
                     }
                 }
             }
-
-            return carFeature;
         }
     }
 }

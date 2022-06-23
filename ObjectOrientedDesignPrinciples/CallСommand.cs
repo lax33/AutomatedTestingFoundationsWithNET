@@ -20,7 +20,7 @@ namespace ObjectOrientedDesignPrinciples
 
                 case "average price type": this.command = new AveragePriceTypes(); break;
 
-                default: Console.WriteLine("No such command"); break;
+                default: Console.WriteLine("No such command !"); break;
             }
         }
     }

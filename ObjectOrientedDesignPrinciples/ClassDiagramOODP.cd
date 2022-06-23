@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ObjectOrientedDesignPrinciples.Car">
-    <Position X="3" Y="4" Width="1.5" />
+    <Position X="1.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAgAAAAAAAAACAAAAAAAAAAQgAAAAAAAA=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.CountTypes">
-    <Position X="8.25" Y="5.25" Width="1.5" />
+    <Position X="6.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAEAAA=</HashCode>
       <FileName>CountTypes.cs</FileName>
@@ -16,7 +16,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.CountAll">
-    <Position X="12.25" Y="5.25" Width="1.5" />
+    <Position X="10" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAA=</HashCode>
       <FileName>CountAll.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.AveragePriceAllCars">
-    <Position X="10.25" Y="5.25" Width="1.5" />
+    <Position X="8.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAAAAAAA=</HashCode>
       <FileName>AveragePriceAllCars.cs</FileName>
@@ -32,28 +32,28 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.CallСommand">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="1.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CallСommand.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.Cars">
-    <Position X="5.5" Y="4" Width="1.5" />
+    <Position X="3" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Cars.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.TypeAvPriceAmount">
-    <Position X="12.5" Y="1.5" Width="2.75" />
+    <Position X="10" Y="2" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAABAAQAAAAAAACAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAQAAAAAAACAAAAAAAAAAQAgAAAAAAA=</HashCode>
       <FileName>TypeAvPriceAmount.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="ObjectOrientedDesignPrinciples.ICommand">
-    <Position X="8.5" Y="2.75" Width="1.5" />
+    <Position X="6.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>ICommand.cs</FileName>
