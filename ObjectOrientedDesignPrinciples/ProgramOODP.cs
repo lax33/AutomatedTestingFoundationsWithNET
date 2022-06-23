@@ -1,12 +1,13 @@
-﻿using System;
-
-namespace ObjectOrientedDesignPrinciples
+﻿namespace ObjectOrientedDesignPrinciples
 {
     internal class ProgramOODP
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cars cars = Cars.Сreate();
+
+            cars.AddCar(new Car() { Type = "Ford", Amount = 5, Model = "Focus", Price = 21000 });
+            cars.AddCar(new Car() { Type = "Ford", Amount = 3, Model = "Mondeo", Price = 25400 });
         }
     }
 }

@@ -10,15 +10,7 @@
             }
         }
 
-        public int Model
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int ID
+        public string Model
         {
             get => default;
             set

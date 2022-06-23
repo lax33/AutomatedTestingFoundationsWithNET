@@ -4,19 +4,28 @@ namespace ObjectOrientedDesignPrinciples
 {
     public class Cars
     {
-        private List<Car> cars;
+        private List<Car> lCars;
 
         public List<Car> ArrayCars
         {
-            get => cars;
-            set
-            {
-            }
+            get => lCars;
+        }
+
+        private static Cars cars;
+
+        private Cars()
+        { }
+
+        public static Cars Сreate()
+        {
+            if (cars == null)
+                cars = new Cars();
+            return cars;
         }
 
         public void AddCar(Car car)
         {
-            cars.Add(car);
+            lCars.Add(car);
         }
     }
 }

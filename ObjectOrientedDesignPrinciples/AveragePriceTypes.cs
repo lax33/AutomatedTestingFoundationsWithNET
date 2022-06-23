@@ -4,7 +4,6 @@ namespace ObjectOrientedDesignPrinciples
 {
     public class AveragePriceTypes : ICommand
     {
-
         private readonly TypeAvPriceAmount feature = new();
 
         public void ExecuteCom(Cars cars)
