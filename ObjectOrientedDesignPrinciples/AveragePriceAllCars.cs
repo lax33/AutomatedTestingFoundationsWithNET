@@ -5,6 +5,7 @@ namespace ObjectOrientedDesignPrinciples
     public class AveragePriceAllCars : ICommand
     {
         private int amountPrice;
+        private double averigePrice;
 
         public void ExecuteCom(Cars cars)
         {
@@ -13,7 +14,12 @@ namespace ObjectOrientedDesignPrinciples
                 amountPrice += car.Price;
             }
 
-            Console.WriteLine($"The average car's cost - {amountPrice / cars.ArrayCars.Count}");
+            averigePrice = amountPrice / cars.ArrayCars.Count;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine($"The average car's cost - {averigePrice}");
         }
     }
 }
