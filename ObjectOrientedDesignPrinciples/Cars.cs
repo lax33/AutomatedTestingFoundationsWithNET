@@ -4,7 +4,7 @@ namespace ObjectOrientedDesignPrinciples
 {
     public class Cars
     {
-        private List<Car> lCars;
+        private List<Car> lCars = new List<Car>();
 
         public List<Car> ArrayCars
         {

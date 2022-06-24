@@ -3,7 +3,7 @@
   <Class Name="ObjectOrientedDesignPrinciples.Car">
     <Position X="0.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAgAAAAAAAAACAAAAAAAAAAQgAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAACAAAAAAAAAAQgAAAAAAAA=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -41,7 +41,7 @@
   <Class Name="ObjectOrientedDesignPrinciples.Cars">
     <Position X="2.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAhASAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Cars.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -57,6 +57,14 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAEAAA=</HashCode>
       <FileName>AveragePriceTypes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ObjectOrientedDesignPrinciples.Exit">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAEAAA=</HashCode>
+      <FileName>Exit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

@@ -13,10 +13,9 @@ namespace ObjectOrientedDesignPrinciples
 
         public void Print()
         {
-            foreach (var typeC in feature.typeCar_amountCarType_averigePrice)
-            {
-                Console.WriteLine($"The count of type - {typeC.Amount}");
-            }
+            
+            Console.WriteLine($"The count of type - {feature.typeCar_amountCarType_averigePrice.Count}");
+            
         }
     }
 }

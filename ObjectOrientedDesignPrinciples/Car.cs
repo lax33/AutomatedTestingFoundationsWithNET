@@ -4,34 +4,27 @@
     {
         public string Type
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
+
         }
 
         public string Model
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public int Price
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public int Amount
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }
