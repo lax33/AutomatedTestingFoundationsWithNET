@@ -13,9 +13,7 @@ namespace ObjectOrientedDesignPrinciples
 
         public void Print()
         {
-            
             Console.WriteLine($"The count of type - {feature.typeCar_amountCarType_averigePrice.Count}");
-            
         }
     }
 }

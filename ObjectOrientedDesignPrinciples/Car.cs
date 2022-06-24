@@ -6,7 +6,6 @@
         {
             get;
             set;
-
         }
 
         public string Model

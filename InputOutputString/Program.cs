@@ -2,9 +2,9 @@
 
 namespace InputOutputString
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             char[] line = args[0].ToCharArray();
 
@@ -21,7 +21,7 @@ namespace InputOutputString
         }
 
         // sorting an array of characters, removing duplicate ones
-        static char[] SortChars(char[] line)
+        private static char[] SortChars(char[] line)
         {
             int numberLine = line.Length;
             char[] arr = new char[numberLine];
