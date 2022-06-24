@@ -5,7 +5,7 @@ namespace ObjectOrientedDesignPrinciples
 {
     internal class ProgramOODP
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             Cars cars = Cars.Сreate();
 
@@ -28,11 +28,8 @@ namespace ObjectOrientedDesignPrinciples
                 callСommand.Command?.Print();
 
 
-                //Console.ReadKey();
+                Console.ReadKey();
             }
-
-           
-
         }
     }
 }
