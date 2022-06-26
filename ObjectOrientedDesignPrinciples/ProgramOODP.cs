@@ -16,6 +16,12 @@ namespace ObjectOrientedDesignPrinciples
 
             while (true)
             {
+                Console.WriteLine("Command's list:");
+                Console.WriteLine("1. count types");
+                Console.WriteLine("2. count all");
+                Console.WriteLine("3. average price");
+                Console.WriteLine("3. average price 'type'");
+
                 Console.Write("Enter the command - ");
                 string command = Console.ReadLine();
                 Console.WriteLine(command);
