@@ -45,20 +45,10 @@
       <FileName>Cars.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ObjectOrientedDesignPrinciples.TypeAvPriceAmount">
-    <Position X="7" Y="6.25" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAAQAAAAAAICAAAAAAAAAAQAgAAAAAAA=</HashCode>
-      <FileName>TypeAvPriceAmount.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="AveragePriceAllCars" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="ObjectOrientedDesignPrinciples.AveragePriceTypes">
     <Position X="10.5" Y="2.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAEAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAgAAEAAA=</HashCode>
       <FileName>AveragePriceTypes.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
