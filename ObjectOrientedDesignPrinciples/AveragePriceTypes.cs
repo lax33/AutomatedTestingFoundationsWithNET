@@ -17,12 +17,9 @@ namespace ObjectOrientedDesignPrinciples
 
         public void ExecuteCom(Cars cars)
         {
-            foreach (var car in cars.ArrayCars) // the search of cars the needing type.
+            foreach (var car in (from car in cars.ArrayCars where car.Type.ToLower() == carType select car)) // the search of cars the needing type.
             {
-                if (car.Type.ToLower() == carType)
-                {
-                    prices.Add(car.Price);
-                }
+                prices.Add(car.Price);
             }
 
             averagePrice = prices.Sum() / prices.Count;

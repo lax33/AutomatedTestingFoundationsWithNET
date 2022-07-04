@@ -5,11 +5,14 @@ namespace ObjectOrientedDesignPrinciples
 {
     public class CountTypes : ICommand
     {
-        private List<Car> countTypes = new();
+        private readonly List<Car> countTypes = new();
 
         public void ExecuteCom(Cars cars)
         {
             countTypes.Add(cars?.ArrayCars[0]);
+
+            if (cars == null) return;
+
             foreach (var car in cars.ArrayCars)
             {
                 foreach (var typ in countTypes)
