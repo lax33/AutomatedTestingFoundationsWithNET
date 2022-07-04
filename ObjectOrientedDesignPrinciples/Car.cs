@@ -14,13 +14,13 @@
             set;
         }
 
-        public int Price
+        public double Price
         {
             get;
             set;
         }
 
-        public int Amount
+        public double Amount
         {
             get;
             set;

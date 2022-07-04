@@ -12,6 +12,14 @@ namespace ObjectOrientedDesignPrinciples
 
         public List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice = new();
 
+        public AveragePriceAllCars AveragePriceAllCars
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         //protected static List<TypeAvPriceAmount> typeCar_amountCarType_averigePrice; // contains computed values by type
         //private double amountPriceType;
 

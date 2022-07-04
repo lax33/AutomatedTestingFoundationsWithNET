@@ -8,9 +8,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.CountTypes">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+    <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAABAAAAAAEAAA=</HashCode>
       <FileName>CountTypes.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.AveragePriceAllCars">
-    <Position X="7" Y="2.5" Width="1.5" />
+    <Position X="6.75" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAAAAEAAI=</HashCode>
       <FileName>AveragePriceAllCars.cs</FileName>
@@ -46,11 +46,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.TypeAvPriceAmount">
-    <Position X="0.5" Y="7.25" Width="2.75" />
+    <Position X="7" Y="6.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAAQAAAAAAACAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAQAAAAAAICAAAAAAAAAAQAgAAAAAAA=</HashCode>
       <FileName>TypeAvPriceAmount.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AveragePriceAllCars" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ObjectOrientedDesignPrinciples.AveragePriceTypes">
     <Position X="10.5" Y="2.5" Width="1.75" />

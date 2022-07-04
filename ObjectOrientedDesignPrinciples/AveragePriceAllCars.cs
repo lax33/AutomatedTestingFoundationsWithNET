@@ -4,7 +4,7 @@ namespace ObjectOrientedDesignPrinciples
 {
     public class AveragePriceAllCars : ICommand
     {
-        private int amountPrice;
+        private double amountPrice;
         private double averigePrice;
 
         public void ExecuteCom(Cars cars)

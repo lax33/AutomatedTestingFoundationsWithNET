@@ -8,10 +8,7 @@ namespace ObjectOrientedDesignPrinciples
 
         public void ExecuteCom(Cars cars)
         {
-            foreach (var car in cars.ArrayCars)
-            {
-                amount += car.Amount;
-            }
+            amount = cars.ArrayCars.Count;
         }
 
         public void Print()

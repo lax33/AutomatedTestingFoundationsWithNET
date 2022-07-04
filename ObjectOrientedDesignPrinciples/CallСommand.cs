@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ObjectOrientedDesignPrinciples
 {
@@ -10,19 +11,26 @@ namespace ObjectOrientedDesignPrinciples
 
         public CallСommand(string command)
         {
-            switch (command)
+            string[] args = command.Split(' ').ToArray();
+
+            if (args.Length == 3)  // for command "average price 'type'"
             {
-                case "count types": this.command = new CountTypes(); break;
+                this.command = new AveragePriceTypes(args[2]);
+            }
+            else
+            {
+                switch (command)
+                {
+                    case "count types": this.command = new CountTypes(); break;
 
-                case "count all": this.command = new CountAll(); break;
+                    case "count all": this.command = new CountAll(); break;
 
-                case "average price": this.command = new AveragePriceAllCars(); break;
+                    case "average price": this.command = new AveragePriceAllCars(); break;
 
-                case "average price type": this.command = new AveragePriceTypes(); break;
+                    case "exit": this.command = new Exit(); break;
 
-                case "exit": this.command = new Exit(); break;
-
-                default: Console.WriteLine("No such command !"); break;
+                    default: Console.WriteLine("No such command !"); break;
+                }
             }
         }
     }
