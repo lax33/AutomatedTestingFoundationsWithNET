@@ -4,19 +4,51 @@
         <name>Flight</name>
     </assembly>
     <members>
+        <member name="M:Flight.Airplane.FlyTo(Flight.Coordinate)">
+            <summary>
+            The distance from the current position to the new point
+            </summary>
+            <param name="newPoint"> New point coordinate </param>
+            <returns> Value in kilometers </returns>
+        </member>
+        <member name="M:Flight.Airplane.GetFlyTime(Flight.Coordinate)">
+            <summary>
+            Airplane flight time.
+            The start speed is 200 km/h and it increases every 10 km by 10 km/h.
+            </summary>
+            <param name="newPoint"> New point coordinate </param>
+            <returns> Value in hours </returns>
+        </member>
         <member name="M:Flight.Bird.FlyTo(Flight.Coordinate)">
             <summary>
             The distance from the current position to the new point
             </summary>
             <param name="newPoint"> New point coordinate </param>
-            <returns></returns>
+            <returns> Value in kilometers </returns>
         </member>
         <member name="M:Flight.Bird.GetFlyTime(Flight.Coordinate)">
             <summary>
-            Flight time
+            Bird flight time. This is the distanse divided by the speed.
+            Bird speed may be between 0-20 кm/h. Speed is randomly selected.
             </summary>
             <param name="newPoint"> New point coordinate </param>
-            <returns></returns>
+            <returns> Value in hours </returns>
+        </member>
+        <member name="M:Flight.Drone.FlyTo(Flight.Coordinate)">
+            <summary>
+            The distance from the current position to the new point.
+            </summary>
+            <param name="newPoint"></param>
+            <returns> Value in kilometers </returns>
+        </member>
+        <member name="M:Flight.Drone.GetFlyTime(Flight.Coordinate)">
+            <summary>
+            Drone flight time.
+            The drone speed 100 km/h.
+            The drone hovers in the air every 10 minutes of flight for 1 minute.
+            </summary>
+            <param name="newPoint"> New point coordinate </param>
+            <returns> Value in hours </returns>
         </member>
     </members>
 </doc>
