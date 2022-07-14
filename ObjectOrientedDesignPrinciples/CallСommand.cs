@@ -13,7 +13,7 @@ namespace ObjectOrientedDesignPrinciples
         {
             string[] args = command.Split(' ').ToArray();
 
-            if (args.Length == 3)  // for command "average price 'type'"
+            if (args.Length == 3)  // for command "average price <type>"
             {
                 this.command = new AveragePriceTypes(args[2]);
             }
