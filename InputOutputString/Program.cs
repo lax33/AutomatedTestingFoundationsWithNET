@@ -86,16 +86,19 @@ namespace InputOutputString
         private static int AmountMaxEquelChar(char[] line)
         {
             int eqChar=0;
+            int eqCharHelp;
+            //char charWithMaxEquel;
             int numberLine = line.Length;
             char[] arr = new char[numberLine];
 
             for (int i = 0; i < numberLine; i++)
             {
-                int r;
+                eqCharHelp = 0;
                 bool coincidence = false; // repeating character indicator
                 char ch = line[i];
-                
-                if (int.TryParse(ch.ToString(), out r)) continue;
+
+                int r;
+                if (int.TryParse(line[i].ToString(), out r)) continue;
 
                 for (int j = 0; j < numberLine; j++)
                 {
@@ -103,14 +106,13 @@ namespace InputOutputString
                     {
                         if (ch == arr[j])
                         {
-                            eqChar++;
+                            eqCharHelp++;
                         }
                     }
                 }
-                //if (coincidence)
-                //{
-                //    eqChar++;
-                //}
+
+                if (eqCharHelp > eqChar) eqChar = eqCharHelp;
+
             }
 
             return eqChar ;
