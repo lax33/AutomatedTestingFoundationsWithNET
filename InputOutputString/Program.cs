@@ -89,7 +89,7 @@ namespace InputOutputString
             int eqCharHelp;
             //char charWithMaxEquel;
             int numberLine = line.Length;
-            char[] arr = new char[numberLine];
+            //char[] arr = new char[numberLine];
 
             for (int i = 0; i < numberLine; i++)
             {
@@ -104,7 +104,7 @@ namespace InputOutputString
                 {
                     if (i != j)
                     {
-                        if (ch == arr[j])
+                        if (ch == line[j])
                         {
                             eqCharHelp++;
                         }
