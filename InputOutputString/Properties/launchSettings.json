@@ -6,7 +6,11 @@
     },
     "sequense with numbers": {
       "commandName": "Project",
-      "commandLineArgs": "vj4hjhjolr6fdfg1hnx7wewr7jgil1dfrh"
+      "commandLineArgs": "vj4h4jhjolr6fdfg1hnx7wewr7jgil71dfrh"
+    },
+    "t": {
+      "commandName": "Project",
+      "commandLineArgs": "qwertyui"
     }
   }
 }

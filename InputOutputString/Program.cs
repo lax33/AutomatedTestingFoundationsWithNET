@@ -10,17 +10,18 @@ namespace InputOutputString
 
             char[] arr = SortChars(line); // result of sorting
 
-            // output to console the new string 
-            for (int j = 0; j < arr.Length; j++)
+            foreach (var ar in arr)
             {
-                if (arr[j] != '\0')
-                { Console.Write(arr[j]); }
+                Console.Write(ar);
             }
 
             Console.WriteLine();
+
             Console.WriteLine(AmountDiffirentChar(arr));
 
-            Console.WriteLine(AmountMaxEquelChar(arr));
+            Console.WriteLine(AmountMaxEquelChar(line));
+
+            Console.WriteLine(AmountMaxEquelNumber(line));
 
             Console.ReadLine();
         }
@@ -54,51 +55,29 @@ namespace InputOutputString
             return arr;
         }
 
-        private static int AmountDiffirentChar(char[] line)
+        private static int AmountDiffirentChar(char[] arr)
         {
-            int diff = 0;
-            int numberLine = line.Length;
-            char[] arr = new char[numberLine];
-
-            for (int i = 0; i < numberLine; i++)
+            int num = 0;
+            foreach (var arrM in arr)
             {
-                bool coincidence = false; // repeating character indicator
-                char ch = line[i];
-                for (int j = 0; j < numberLine; j++)
-                {
-                    if (i != j)
-                    {
-                        if (ch == arr[j])
-                        {
-                            coincidence = true;
-                        }
-                    }
-                }
-                if (!coincidence)
-                {
-                    diff++;
-                }
+                if (arrM != '\0') num++;
             }
 
-            return diff ;
+            return num;
         }
 
         private static int AmountMaxEquelChar(char[] line)
         {
-            int eqChar=0;
-            int eqCharHelp;
-            //char charWithMaxEquel;
+            int eqChar = 0;
+
             int numberLine = line.Length;
-            //char[] arr = new char[numberLine];
 
             for (int i = 0; i < numberLine; i++)
             {
-                eqCharHelp = 0;
-                bool coincidence = false; // repeating character indicator
+                int eqCharHelp = 1;
                 char ch = line[i];
 
-                int r;
-                if (int.TryParse(line[i].ToString(), out r)) continue;
+                if (int.TryParse(line[i].ToString(), out _)) continue;
 
                 for (int j = 0; j < numberLine; j++)
                 {
@@ -111,42 +90,36 @@ namespace InputOutputString
                     }
                 }
 
-                if (eqCharHelp > eqChar) eqChar = eqCharHelp;
-
+                if (eqCharHelp > eqChar && eqCharHelp != 1) eqChar = eqCharHelp;
             }
 
-            return eqChar ;
+            return eqChar;
         }
 
         private static int AmountMaxEquelNumber(char[] line)
         {
-            int eqNum=0;
+            int eqNum = 0;
 
             int numberLine = line.Length;
-            char[] arr = new char[numberLine];
 
             for (int i = 0; i < numberLine; i++)
             {
-                int r;
-                bool coincidence = false; // repeating character indicator
+                int eqNumHelp = 1;
                 char ch = line[i];
 
-                if (!int.TryParse(ch.ToString(), out r)) continue;
+                if (!int.TryParse(ch.ToString(), out _)) continue;
 
                 for (int j = 0; j < numberLine; j++)
                 {
                     if (i != j)
                     {
-                        if (ch == arr[j])
+                        if (ch == line[j])
                         {
-                            coincidence = true;
+                            eqNumHelp++;
                         }
                     }
                 }
-                if (coincidence)
-                {
-                    eqNum++;
-                }
+                if (eqNumHelp > eqNum && eqNumHelp != 1) eqNum = eqNumHelp;
             }
 
             return eqNum;
