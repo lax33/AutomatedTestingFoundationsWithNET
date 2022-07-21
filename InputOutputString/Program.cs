@@ -68,61 +68,60 @@ namespace InputOutputString
 
         private static int AmountMaxEquelChar(char[] line)
         {
-            int eqChar = 0;
-
-            int numberLine = line.Length;
-
-            for (int i = 0; i < numberLine; i++)
-            {
-                int eqCharHelp = 1;
-                char ch = line[i];
-
-                if (int.TryParse(line[i].ToString(), out _)) continue;
-
-                for (int j = 0; j < numberLine; j++)
-                {
-                    if (i != j)
-                    {
-                        if (ch == line[j])
-                        {
-                            eqCharHelp++;
-                        }
-                    }
-                }
-
-                if (eqCharHelp > eqChar && eqCharHelp != 1) eqChar = eqCharHelp;
-            }
-
-            return eqChar;
+            return MaxEqual(line, false);
         }
 
         private static int AmountMaxEquelNumber(char[] line)
         {
-            int eqNum = 0;
+            return MaxEqual(line, true);
+        }
+
+        private static int MaxEqual(char[] line, bool numberOrChar)
+        {
+            int equal = 0;
 
             int numberLine = line.Length;
 
             for (int i = 0; i < numberLine; i++)
             {
-                int eqNumHelp = 1;
+                int eqHelp = 1;
                 char ch = line[i];
 
-                if (!int.TryParse(ch.ToString(), out _)) continue;
-
-                for (int j = 0; j < numberLine; j++)
+                if (numberOrChar)  // if search numbers
                 {
-                    if (i != j)
+                    if (!int.TryParse(ch.ToString(), out _)) continue;
+
+                    for (int j = 0; j < numberLine; j++)
                     {
-                        if (ch == line[j])
+                        if (i != j)
                         {
-                            eqNumHelp++;
+                            if (ch == line[j])
+                            {
+                                eqHelp++;
+                            }
                         }
                     }
                 }
-                if (eqNumHelp > eqNum && eqNumHelp != 1) eqNum = eqNumHelp;
+                else              // if search chars
+                {
+                    if (int.TryParse(ch.ToString(), out _)) continue;
+
+                    for (int j = 0; j < numberLine; j++)
+                    {
+                        if (i != j)
+                        {
+                            if (ch == line[j])
+                            {
+                                eqHelp++;
+                            }
+                        }
+                    }
+                }
+
+                if (eqHelp > equal && eqHelp != 1) equal = eqHelp;
             }
 
-            return eqNum;
+            return equal;
         }
     }
 }
