@@ -2,9 +2,9 @@
 
 namespace InputOutputString
 {
-    internal class Program
+    public class Program
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
             char[] line = args[0].ToCharArray();
 
@@ -27,7 +27,7 @@ namespace InputOutputString
         }
 
         // sorting an array of characters, removing duplicate ones
-        private static char[] SortChars(char[] line)
+        public static char[] SortChars(char[] line)
         {
             int numberLine = line.Length;
             char[] arr = new char[numberLine];
@@ -55,7 +55,7 @@ namespace InputOutputString
             return arr;
         }
 
-        private static int AmountDiffirentChar(char[] arr)
+        public static int AmountDiffirentChar(char[] arr)
         {
             int num = 0;
             foreach (var arrM in arr)
@@ -66,12 +66,12 @@ namespace InputOutputString
             return num;
         }
 
-        private static int AmountMaxEquelChar(char[] line)
+        public static int AmountMaxEquelChar(char[] line)
         {
             return MaxEqual(line, false);
         }
 
-        private static int AmountMaxEquelNumber(char[] line)
+        public static int AmountMaxEquelNumber(char[] line)
         {
             return MaxEqual(line, true);
         }
