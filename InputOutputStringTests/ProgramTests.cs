@@ -18,7 +18,7 @@ namespace InputOutputString.Tests
         private static readonly char[] arr = { 'v', 'j', '4', 'h', 'o', 'l', 'r', '6', 'f', 'd', 'g', '1', 'n', 'x', '7', 'w', 'e', 'i'};
 
         readonly static char[] result_SortChars = Program.SortChars(line);
-         readonly char[] result_SortChars1 = result_SortChars;
+         readonly char[] result_SortChars1 = 
 
         readonly int result_AmountMaxEquelChar = Program.AmountMaxEquelChar(line);
 
