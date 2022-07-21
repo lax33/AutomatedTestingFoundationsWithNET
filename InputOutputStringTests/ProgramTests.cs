@@ -1,11 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using InputOutputString;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json.Linq;
+﻿using InputOutputString;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace InputOutputString.Tests
+namespace InputOutputStringTests
 {
     [TestClass()]
     public class ProgramTests
@@ -17,8 +13,8 @@ namespace InputOutputString.Tests
 
         private static readonly char[] arr = { 'v', 'j', '4', 'h', 'o', 'l', 'r', '6', 'f', 'd', 'g', '1', 'n', 'x', '7', 'w', 'e', 'i'};
 
-        readonly static char[] result_SortChars = Program.SortChars(line);
-         readonly char[] result_SortChars1 = 
+
+        static readonly char[] result_SortChars = Program.SortChars(line).Where(x => x != '\0').ToArray();
 
         readonly int result_AmountMaxEquelChar = Program.AmountMaxEquelChar(line);
 
