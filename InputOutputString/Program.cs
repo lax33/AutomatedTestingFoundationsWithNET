@@ -17,11 +17,11 @@ namespace InputOutputString
 
             Console.WriteLine();
 
-            Console.WriteLine(AmountDiffirentChar(arr));
+            Console.WriteLine($"AmountDiffirentChar  - {AmountDiffirentChar(arr)}");
 
-            Console.WriteLine(AmountMaxEquelChar(line));
+            Console.WriteLine($"AmountMaxEquelChar   - {AmountMaxEquelChar(line)}");
 
-            Console.WriteLine(AmountMaxEquelNumber(line));
+            Console.WriteLine($"AmountMaxEquelNumber - {AmountMaxEquelNumber(line)}");
 
             Console.ReadLine();
         }
