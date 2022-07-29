@@ -11,40 +11,41 @@ namespace InputOutputStringTests
             'd', 'f', 'g', '1', 'h', 'n', 'x', '7', 'w', 'e', 'w', 'r', '7', 'j',
             'g', 'i', 'l', '7', '1', 'd', 'f', 'r', 'h'};
 
-        private static readonly char[] arr = { 'v', 'j', '4', 'h', 'o', 'l', 'r', '6', 'f', 'd', 'g', '1', 'n', 'x', '7', 'w', 'e', 'i' };
+        private static readonly char[] arr = { 'v', 'j', '4', 'h', 'o', 'l', 'r', '6', 'f', 'd', 'g', '1', 'n',
+            'x', '7', 'w', 'e', 'i' };
 
         // Act
 
         [TestMethod]
         public void SortChars_Test()
         {
-            char[] result_SortChars = Program.SortChars(line).Where(x => x != '\0').ToArray();
+            char[] resultSortChars = Program.SortChars(line).Where(x => x != '\0').ToArray();
 
-            CollectionAssert.AreEqual(arr, result_SortChars);
+            CollectionAssert.AreEqual(arr, resultSortChars);
         }
 
         [TestMethod]
         public void AmountMaxEquelChar_Test()
         {
-            int result_AmountMaxEquelChar = Program.AmountMaxEquelChar(line);
+            int resultAmountMaxEquelChar = Program.AmountMaxEquelChar(line);
 
-            Assert.AreEqual(4, result_AmountMaxEquelChar);
+            Assert.AreEqual(4, resultAmountMaxEquelChar);
         }
 
         [TestMethod]
         public void AmountDiffirentChar_Test()
         {
-            int result_AmountDiffirentChar = Program.AmountDiffirentChar(arr);
+            int resultAmountDiffirentChar = Program.AmountDiffirentChar(arr);
 
-            Assert.AreEqual(18, result_AmountDiffirentChar);
+            Assert.AreEqual(18, resultAmountDiffirentChar);
         }
 
         [TestMethod]
         public void AmountMaxEquelNumber_Test()
         {
-            int result_AmountMaxEquelNumber = Program.AmountMaxEquelNumber(line);
+            int resultAmountMaxEquelNumber = Program.AmountMaxEquelNumber(line);
 
-            Assert.AreEqual(3, result_AmountMaxEquelNumber);
+            Assert.AreEqual(3, resultAmountMaxEquelNumber);
         }
     }
 }
